@@ -1,0 +1,111 @@
+1. Descargar VSC (visual studio code).
+2. Descargar node.
+3. Abrir visual, ubicarte donde vas a trabajar.
+4. Abrir una nueva terminal powershell fijarse que en su configuración diga integrated
+	//sino F1- create new integrated terminal. Esto me sirve para poder utilizar node.
+5. Colocar en la consola npm create vite@latest
+	npm significa node package manager
+	vite es una herramienta para crear aplicaciones react desde 0 con configuraciones mínimas de un proyecto nuevo.
+6. Seguir con el menú:
+	Need to install the following packages:
+	create-vite@5.1.0
+	Ok to proceed? (y) y
+	? Project name: » vite-project
+	√ Project name: ... vite-project
+	? Select a framework: » - Use arrow-keys. Return to submit.
+		Vanilla
+		Vue
+	>   React
+		Preact
+		Lit
+		Svelte
+		Solid
+		Qwik
+		Others
+	√ Select a framework: » React
+	? Select a variant: » - Use arrow-keys. Return to submit.
+    TypeScript
+    TypeScript + SWC
+>   JavaScript
+    JavaScript + SWC
+	//Elegir uno que no sea TypeScript: 
+		TypeScript es un lenguaje de programación. Es un superconjunto de JavaScript, que esencialmente añade tipos estáticos y objetos basados en clases.
+		TypeScript extiende la sintaxis de JavaScript, por tanto cualquier código JavaScript existente debería funcionar sin problemas. Está pensado para grandes proyectos, los cuales a través de un compilador de TypeScript se traducen a código JavaScript original.
+	//SWC se refiere a “Super-fast Web Compiler” (Compilador web súper rápido, en español)
+	Done. Now run:
+
+	  cd vite-project
+	  npm install    
+	  npm run dev    
+
+	npm notice 
+	npm notice New minor version of npm available! 10.2.4 -> 10.4.0
+	npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.4.0
+	npm notice Run npm install -g npm@10.4.0 to update!
+	npm notice
+7. Ejecutar esos tres comandos que te pide:
+	cd vite-project
+	npm install    
+	npm run dev
+	Ahora tengo un proyecto vite armado.
+	Notas:
+	para ejecutar el código uso el comando npm run dev.
+	para dejar de ejecutarlo ctrl+C.
+	si yo recargo la página el componente vuelve a renderizarse entonces vuelve al valor default (0).
+	todo lo que tenga entre llaves va a ser código de JavaScript.
+8. Luego de haberlo ejecutado tengo una página de vite armada en localhost:5173 eso es por el código que viene por default.
+9. Borro todo lo que tiene App.jsx dentro del return y pongo un bello mensaje.
+	Notas: En react para escribir  <h1>Hola pedazo de putos</h1><p>otra vez yo aca luchando con react</p>
+	necesito tenerlo dentro de un tag vacío <> </> porque sino da error.
+10. Scaffoldign (encarpetado): 
+	node_modules:
+		//Tiene de todos los módulos instalados, se generó automáticamente.
+	public:
+		vite.svg
+	//Agregar carpetas como figuran en la diapo.
+	src:
+		a. assets: 
+			react.svg	//Imágenes
+		b. components:	//Componentes por ejemplo una tarjeta que voy a usar en varias partes
+						ojo NO VARIAS PÁGINAS 
+		c. config:	//Configuraciones
+		d. constants:	//Cosas que se usan en todos lados como los colores
+		e. hooks:	//Customhooks, funciones que manejan estados por ejemplo, buscar alumno
+		f. modules:	//Páginas + layout
+		g. routes:	//Rutas
+		h. services:	//Conección con el BackEnd
+		i. styles:	//Estilos
+		j. utils:	//Utilidades funciones que no tienen estados
+		App.css
+		App.jsx
+		index.css
+		main.jsx
+	.eslintrc.cjs
+	.gitignore
+	index.html
+	package-lock.json	//Arbol de dependencias
+	package.json	//Esqueleto del proyecto 
+						"scripts": {
+						"dev": "vite",
+						...
+					  },
+					  "dependencies": {
+						"react": "^18.2.0",
+						"react-dom": "^18.2.0"
+					  },
+					  "devDependencies"
+					  ...
+	README.md	//Info del proyecto
+	vite.config.js	//Configuraciones del vite
+11. Instalar librerías:
+	a. npm i react-router-dom	//Sirve para el manejo de rutas dentro de la app.
+	Una parte se encarga de mapear las rutas para que la app reconozca las url y que componente renderiza con cada item.
+	La otra parte (Layout), nos permite navegar en estas rutas, así no tenemos que tipear siempre la url en la barra de navegación.
+	b. npm install --save-dev --save-exact prettier //Significa mas bonito, formatea el código y se puede configurar por reglas para que todo se vea igual.
+	c. npm install --save-dev eslint //Es un analizador de código que permite detectar errores estáticos.
+	d. npm i axios //Axios es una librería JavaScript que puede ejecutarse en el navegador y que nos permite hacer sencillas las operaciones como cliente HTTP, por lo que podremos configurar y realizar solicitudes a un servidor y recibiremos respuestas fáciles de procesar.
+Notas:
+si quiero instalar una dependencia npm i nombre por ejemplo, npm i axios
+si quiero instalar una versión específica npm i nombre@numeroversion por ejemplo, npm i axios@1.1.1
+algunas versiones tienen el número así "^18.2.0" si no tienen ese piquito la versión queda fija, sino es la última disponible.
+si quiero desinstalar alguna dependencia puedo borrarla del package.json y hacer npm i o ejecutar el comando npm uninstall con el nombre de la dependencia.
