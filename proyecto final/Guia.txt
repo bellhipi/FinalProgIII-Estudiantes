@@ -30,7 +30,8 @@
     JavaScript + SWC
 	//Elegir uno que no sea TypeScript: 
 		TypeScript es un lenguaje de programación. Es un superconjunto de JavaScript, que esencialmente añade tipos estáticos y objetos basados en clases.
-		TypeScript extiende la sintaxis de JavaScript, por tanto cualquier código JavaScript existente debería funcionar sin problemas. Está pensado para grandes proyectos, los cuales a través de un compilador de TypeScript se traducen a código JavaScript original.
+		TypeScript extiende la sintaxis de JavaScript, por tanto cualquier código JavaScript existente debería funcionar sin problemas. 
+		Está pensado para grandes proyectos, los cuales a través de un compilador de TypeScript se traducen a código JavaScript original.
 	//SWC se refiere a “Super-fast Web Compiler” (Compilador web súper rápido, en español)
 	Done. Now run:
 
@@ -57,6 +58,7 @@
 9. Borro todo lo que tiene App.jsx dentro del return y pongo un bello mensaje.
 	Notas: En react para escribir  <h1>Hola pedazo de putos</h1><p>otra vez yo aca luchando con react</p>
 	necesito tenerlo dentro de un tag vacío <> </> porque sino da error.
+	https://es.react.dev/learn
 10. Scaffoldign (encarpetado): 
 	node_modules:
 		//Tiene de todos los módulos instalados, se generó automáticamente.
@@ -103,9 +105,51 @@
 	La otra parte (Layout), nos permite navegar en estas rutas, así no tenemos que tipear siempre la url en la barra de navegación.
 	b. npm install --save-dev --save-exact prettier //Significa mas bonito, formatea el código y se puede configurar por reglas para que todo se vea igual.
 	c. npm install --save-dev eslint //Es un analizador de código que permite detectar errores estáticos.
-	d. npm i axios //Axios es una librería JavaScript que puede ejecutarse en el navegador y que nos permite hacer sencillas las operaciones como cliente HTTP, por lo que podremos configurar y realizar solicitudes a un servidor y recibiremos respuestas fáciles de procesar.
+	d. npm i axios //Axios es una librería JavaScript que puede ejecutarse en el navegador y que nos permite hacer sencillas las operaciones como cliente HTTP, 
+	por lo que podremos configurar y realizar solicitudes a un servidor y recibiremos respuestas fáciles de procesar.
 Notas:
 si quiero instalar una dependencia npm i nombre por ejemplo, npm i axios
 si quiero instalar una versión específica npm i nombre@numeroversion por ejemplo, npm i axios@1.1.1
 algunas versiones tienen el número así "^18.2.0" si no tienen ese piquito la versión queda fija, sino es la última disponible.
 si quiero desinstalar alguna dependencia puedo borrarla del package.json y hacer npm i o ejecutar el comando npm uninstall con el nombre de la dependencia.
+12. Hooks: son funciones que te permiten “enganchar” el estado de React y el ciclo de vida desde componentes de función.
+	a. useState: Sirve para manejar el estado de un componente, 
+	por ejemplo [nombre, nombreFuncion] = useState (valorInicial) con esto se declara el estado y luego con la funcion se lo puede modificar.
+	b. useEffect: Sirve para manejar efectos laterales (llamadas a servicios externos, modificar listados atacheados a otra cosa),
+	por ejemplo useEffect( funcionFlecha , dependencias);
+		Dependencias:
+			a. Array de dependencias:
+			useEffect(() => {
+				// ...
+			}, [a, b]); // Se ejecuta de nuevo si a o b son diferentes
+			b. Array vacío:
+			useEffect(() => {
+				// ...
+			}, []); // No se vuelve a ejecutar (excepto una vez más en el modo de desarrollo)
+			c. No pasar array:
+			useEffect(() => {
+				// ...
+			}); // Siempre se vuelve a ejecutar
+	https://es.react.dev/reference/react/useEffect#examples-dependencies
+	Notas:
+	La sintaxis básica de las funciones flecha o arrow functions sin parámetros es la siguiente:
+	() => { sentencias }
+	En una función con un solo parámetro podríamos prescindir de paréntesis:
+	(singleParam) => { sentencias } singleParam => { sentencias }
+	Y una función con más de un parámetro podríamos representarla como:
+	(param1, param2, …, paramN) => { sentencias }
+	(param1, param2, …, paramN) => expresion
+	c. useContext: Sirve para manejar estados globales. 
+			.
+			.
+			.
+			
+Me cansé de dar vuelta vamos a los bifes...
+
+Instalar la librería ant desing para la parte gráfica npm install antd --save
+Instala la librería formiK para formularios npm install formik
+Instalar la librería lscache para la almacenar datos locales por ejemplo de autenticación npm install lscache
+
+Fui a Ant Design y empecé a copiar código y modificarlo 
+Borre el index.css
+Cree más páginas.jsx que no se como rutear
