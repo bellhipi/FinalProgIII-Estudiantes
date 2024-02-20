@@ -1,0 +1,97 @@
+[
+    {
+        "id": 1,
+        "materias": [
+            "Arte",
+            "Biología",
+            "Catequésis",
+            "Educación Física",
+            "Educación Tecnológica",
+            "Formación Ética y Ciudadana",
+            "Geografía",
+            "Historia",
+            "Inglés",
+            "Lengua y Literatura Castellana",
+            "Matemática",
+            "Técnicas de Estudio",
+            "Tutoría"
+        ]
+    },
+    {
+        "id": 2,
+        "materias": [
+            "Arte",
+            "Biología",
+            "Catequésis",
+            "Educación Física",
+            "Educación Tecnológica",
+            "Formación Ética y Ciudadana",
+            "Geografía",
+            "Historia",
+            "Inglés",
+            "Lengua y Literatura Castellana",
+            "Matemática",
+            "Taller de Comunicación",
+            "Técnicas de Estudio",
+            "Tutoría"
+        ]
+    },
+    {
+        "id": 3,
+        "materias": [
+            "Biología",
+            "Economía",
+            "EDI",
+            "Educación Física",
+            "Físicoquímica",
+            "Formación Ética y Ciudadana",
+            "Fundomentos de los Sistemas Contables y de Administración",
+            "Geografía",
+            "Historia",
+            "Inglés",
+            "Lengua y Literatura Castellana",
+            "Matemática",
+            "Organizaciones",
+            "Tecnologías de la Información"
+        ]
+    },
+    {
+        "id": 4,
+        "materias": [
+            "Administración de Personal",
+            "Arte",
+            "Catequésis",
+            "Economía",
+            "Educación Física",
+            "Física",
+            "Formación Ética y Ciudadana",
+            "Geografía",
+            "Historia",
+            "Inglés",
+            "Lengua y Literatura Castellana",
+            "Matemática",
+            "Sistemas Administrativos",
+            "Sistemas de Información Contable",
+            "Tecnologías de la Información"
+        ]
+    },
+    {
+        "id": 5,
+        "materias": [
+            "Catequésis",
+            "Contabilidad de Costos",
+            "Contabilidad Patrimonial y de Gestión",
+            "Derecho",
+            "Economía",
+            "Educación Física",
+            "Filosofía",
+            "Historia",
+            "Inglés Técnico",
+            "Lengua y Literatura Castellana",
+            "Matemática",
+            "Proyecto Organizacional",
+            "Química",
+            "Tecnologías de la Información"
+        ]
+    }
+]

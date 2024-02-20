@@ -1,26 +1,33 @@
 import React from 'react';
 import { Breadcrumb, Layout, Menu, theme, Image, Divider, Col, Row } from 'antd';
-import { Outlet } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
+import {
+    HomeOutlined,
+    LoginOutlined,
+    FileProtectOutlined,
+    ProfileOutlined,
+    ReadOutlined,
+    FormOutlined
+  } from '@ant-design/icons'
 const { Header, Content, Footer } = Layout;
-const items = new Array(15).fill(null).map((_, index) => ({
-    key: index + 1,
-    label: `nav ${index + 1}`,
-}));
-/*
-function getItem(label, key, icon, children) {
-    return {
-        key,
-//        icon,
-//        children,
-        label,
-    }
-}
 
-const items = [
+function getItem(label, key, icon) {
+    return {
+      key,
+      icon,
+      label,
+    }
+  }
+  
+  const items = [
     getItem(<Link to="/"> Home </Link>, '1', <HomeOutlined />),
-//    getItem(<Link to="/students"> Alumnos </Link>, '2', <HomeOutlined />),
-];
-*/
+    getItem(<Link to="/login"> Login </Link>, '2', <LoginOutlined />),
+    getItem(<Link to="/*"> Attendance </Link>, '3', <FileProtectOutlined />),
+    getItem(<Link to="/*"> Report Card </Link>, '4', <ProfileOutlined />),
+    getItem(<Link to="/subjects"> Subjects </Link>, '5', <ReadOutlined />),
+    getItem(<Link to="/register">  Register </Link>, '6', <FormOutlined />),
+  ];
+
 const onFinish = (values) => {
     console.log('Success:', values);
 };
