@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
 import listadoAlumnos from '../../data/alumnos.json';
-import Alumno from '../../components/alumno';
+import Alumno from '../../components/Alumno';
 import { Typography } from 'antd';
 const { Title } = Typography;
 
 
 
-const App = () => {
+const Home = () => {
   const [alumnos, setAlumnos] = useState([]);
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -38,4 +38,4 @@ const App = () => {
     </>
   )
 };
-export default App;
+export default Home

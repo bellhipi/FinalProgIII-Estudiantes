@@ -3,11 +3,29 @@
         "dni": 39560846,
         "nombre": "HIPÓLITO, María Belén",
         "curso": 4,
-        "ausentes": ["hola","chau"]
+        "ausentes": 0
+    },
+    {
+        "dni": 39560845,
+        "nombre": "HIPÓLITOss, María Belén",
+        "curso": 4,
+        "ausentes": 0
+    },
+    {
+        "dni": 39560844,
+        "nombre": "HIPÓLITOs, María Belén",
+        "curso": 4,
+        "ausentes": 0
     },
     {
         "dni": 36560519,
         "nombre": "LAMELA, Daniel Fabián",
+        "curso": 3,
+        "ausentes": 0
+    },
+    {
+        "dni": 36560518,
+        "nombre": "LAMELAs, Daniel Fabián",
         "curso": 3,
         "ausentes": 0
     }

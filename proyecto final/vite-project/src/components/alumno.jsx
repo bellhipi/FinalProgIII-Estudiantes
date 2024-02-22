@@ -1,7 +1,7 @@
 function Alumno({ dni, nombre, curso, ausentes }) {
     return (
       <>
-        Legajo: {dni}. Nombre: {nombre}. Curso: {curso}{'° Año'}. Inasistencias: {ausentes}.
+        DNI: {dni}.
         <br/>
       </>
     )

@@ -1,6 +1,7 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import Layout from './modules/layout'
 import Home from './modules/home'
+import Attendance from './modules/attendance'
 import Login from './modules/login'
 import Subjects from './modules/subjects'
 import Register from './modules/register'
@@ -13,8 +14,9 @@ function App() {
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
-            <Route path="login" element={<Login />} />
+            <Route path="attendance" element={<Attendance />} />
             <Route path="subjects" element={<Subjects />} />
+            <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
             <Route path="*" element={<NotFound />} />
           </Route>

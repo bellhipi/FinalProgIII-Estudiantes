@@ -30,7 +30,7 @@ const onChange = (value) => {
   console.log('changed', value);
 };
 
-const App = () => (
+const Register = () => (
   <Form
     {...formItemLayout}
     variant="filled"
@@ -178,4 +178,4 @@ const App = () => (
     </Form.Item>
   </Form>
 );
-export default App;
+export default Register

@@ -1,6 +1,6 @@
 import { Button, Result } from 'antd'
 import { Link } from 'react-router-dom'
-const App = () => (
+const NotFound = () => (
   <Result
     status="404"
     title="404"
@@ -10,4 +10,4 @@ const App = () => (
     }
   />
 )
-export default App
+export default NotFound

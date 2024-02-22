@@ -9,6 +9,8 @@ import {
     ReadOutlined,
     FormOutlined
   } from '@ant-design/icons'
+
+  
 const { Header, Content, Footer } = Layout;
 
 function getItem(label, key, icon) {
@@ -21,11 +23,11 @@ function getItem(label, key, icon) {
   
   const items = [
     getItem(<Link to="/"> Home </Link>, '1', <HomeOutlined />),
-    getItem(<Link to="/login"> Login </Link>, '2', <LoginOutlined />),
-    getItem(<Link to="/*"> Attendance </Link>, '3', <FileProtectOutlined />),
-    getItem(<Link to="/*"> Report Card </Link>, '4', <ProfileOutlined />),
-    getItem(<Link to="/subjects"> Subjects </Link>, '5', <ReadOutlined />),
-    getItem(<Link to="/register">  Register </Link>, '6', <FormOutlined />),
+    getItem(<Link to="/attendance"> Attendance </Link>, '2', <FileProtectOutlined />),
+    getItem(<Link to="/*"> Report Card </Link>, '3', <ProfileOutlined />),
+    getItem(<Link to="/subjects"> Subjects </Link>, '4', <ReadOutlined />),
+    getItem(<Link to="/register">  Register </Link>, '5', <FormOutlined />),
+    getItem(<Link to="/login"> Login </Link>, '6', <LoginOutlined />),
   ];
 
 const onFinish = (values) => {
@@ -122,4 +124,4 @@ const App = () => {
         </Layout>
     );
 };
-export default App;
+export default App
