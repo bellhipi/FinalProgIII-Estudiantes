@@ -9,13 +9,13 @@
         "dni": 39560845,
         "nombre": "HIPÓLITOss, María Belén",
         "curso": 4,
-        "ausentes": 0
+        "ausentes": 200
     },
     {
         "dni": 39560844,
         "nombre": "HIPÓLITOs, María Belén",
         "curso": 4,
-        "ausentes": 0
+        "ausentes": 190
     },
     {
         "dni": 36560519,
@@ -27,6 +27,6 @@
         "dni": 36560518,
         "nombre": "LAMELAs, Daniel Fabián",
         "curso": 3,
-        "ausentes": 0
+        "ausentes": 1
     }
 ]

@@ -1,7 +1,7 @@
 import { useState, useEffect, React } from 'react'
 import listadoCursos from '../../data/cursos.json'
 import listadoAlumnos from '../../data/alumnos.json';
-import { Select, Divider, List, Typography, Flex, Spin } from 'antd';
+import { Select, Divider, List, Typography, Flex, Spin, Card, Button } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 const { Title } = Typography;
 
@@ -12,11 +12,24 @@ const filterOption = (input, option) =>
 const Attendance = () => {
 
     const [alumnos, setAlumnos] = useState([]);
-    const [anios, setAnios] = useState([])
+    const [anios, setAnios] = useState([]);
 
     const onChange = (value) => {
-        console.log(`selected ${value}`);
-        setAlumnos(listadoAlumnos.filter((a) => a.curso == value))
+        setAlumnos(listadoAlumnos.filter((a) => a.curso === value))
+    };
+
+    const onClick = (value) => {
+         const newAlumno = alumnos.map((a) => {
+            if (a.dni === value) {
+                return {
+                    ...a,
+                    ausentes: a.ausentes+1
+                };
+            } else {
+                return a;
+            }
+        });
+        setAlumnos(newAlumno)
     };
 
     useEffect(() => {
@@ -74,13 +87,24 @@ const Attendance = () => {
                 dataSource={alumnos}
                 renderItem={(item, index) => (
 
-                    <List.Item>
+                    <List.Item
+                        actions={[<Card size="small" style={{ width: 75 }}>
+                            <p>{item.ausentes}</p>
+                        </Card>, <Button type="link" onClick={() => onClick(item.dni)} disabled={item.ausentes >= 190}>
+                            ausente
+                        </Button>]
+                        }
+                    >
                         <List.Item.Meta
                             key={index}
                             title={item.nombre}
                             description={item.dni}
                         />
+
+                        <div>Inasistencias:</div>
+
                     </List.Item>
+
                 )}
             />
 

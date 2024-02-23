@@ -1,10 +1,8 @@
 import { useState, useEffect, React } from 'react'
 import listadoCursos from '../data/cursos.json'
-import Curso from '../components/curso';
-import { Select, Divider, List, Typography, Flex, Spin } from 'antd';
+//import Curso from '../components/curso';
+import { Select, Divider, List, Flex, Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
-const { Title } = Typography;
-
 
 // Filter `option.label` match the user type `input`
 const filterOption = (input, option) =>
@@ -13,11 +11,37 @@ const filterOption = (input, option) =>
 const Filter = () => {
     const [cursos, setCursos] = useState([])
     const [anios, setAnios] = useState([])
+    const [materias, setMaterias] = useState([])
 
     const onChange = (value) => {
-        console.log(`selected ${value}`);
-        setCursos(listadoCursos.filter((c) => c.id == value))
+        //console.log(value)
+        let aux = listadoCursos.filter((c) => {
+        //setCursos(listadoCursos.filter((c) => { 
+            //console.log(c.id)
+            //console.log(value)
+            //console.log(c.id === value)
+            c.id === value 
+            console.log(c)
+        })
+        console.log(aux)
+        setMaterias(cursos[0].materias)
     };
+
+    /* const logUserToBack = async (logUser) => {
+        await api
+          .post('/loguser', logUser)
+          .then((response) => {
+            if (!response.data) {
+              alert('nombre de usuario o contraseña invalida, por favor intente nuevamente');
+            } else {
+              setUserLogged(response.data);
+              navigate('/userMain', { replace: true });
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      }; */
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -29,7 +53,7 @@ const Filter = () => {
 
     return (
         <>
-            {cursos.length == 0 && anios.length == 0 ? (
+            {cursos.length == 0 && anios.length == 0 && materias.length == 0 ? (
                 <>
                     <Flex gap="large" vertical>
                         <Spin
@@ -66,10 +90,10 @@ const Filter = () => {
             <List
                 size="large"
                 bordered
-                dataSource={cursos.map((c) => (
-                    <Curso key={c.id} {...c} />
-                ))}
-                renderItem={(item) => <List.Item>{item}</List.Item>}
+                itemLayout="horizontal"
+                dataSource={materias}
+                renderItem={(item) => (
+                    <List.Item>{item}</List.Item>)}
             />
         </>)
 }

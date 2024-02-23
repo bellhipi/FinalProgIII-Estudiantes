@@ -73,11 +73,10 @@ const App = () => {
             >
                 <Breadcrumb
                     style={{
-                        margin: '16px 0',
+                        margin: '25px 0',
                     }}
                 >
-                    <Breadcrumb.Item>Home</Breadcrumb.Item>
-                    <Breadcrumb.Item>Login</Breadcrumb.Item>
+                    
                 </Breadcrumb>
                 <div
                     style={{
