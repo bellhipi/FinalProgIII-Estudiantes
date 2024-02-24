@@ -2,8 +2,9 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import Layout from './modules/layout'
 import Home from './modules/home'
 import Attendance from './modules/attendance'
-import Login from './modules/login'
 import Subjects from './modules/subjects'
+import ReportCard from './modules/reportcard'
+import Login from './modules/login'
 import Register from './modules/register'
 import NotFound from './modules/notfound'
 
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="attendance" element={<Attendance />} />
             <Route path="subjects" element={<Subjects />} />
+            <Route path="reportcard" element={<ReportCard />} />
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
             <Route path="*" element={<NotFound />} />

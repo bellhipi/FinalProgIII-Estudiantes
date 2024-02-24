@@ -4,6 +4,7 @@ import { Outlet, Link } from 'react-router-dom';
 import {
     HomeOutlined,
     LoginOutlined,
+    LogoutOutlined,
     FileProtectOutlined,
     ProfileOutlined,
     ReadOutlined,
@@ -24,10 +25,11 @@ function getItem(label, key, icon) {
   const items = [
     getItem(<Link to="/"> Home </Link>, '1', <HomeOutlined />),
     getItem(<Link to="/attendance"> Attendance </Link>, '2', <FileProtectOutlined />),
-    getItem(<Link to="/*"> Report Card </Link>, '3', <ProfileOutlined />),
+    getItem(<Link to="/reportcard"> Report Card </Link>, '3', <ProfileOutlined />),
     getItem(<Link to="/subjects"> Subjects </Link>, '4', <ReadOutlined />),
     getItem(<Link to="/register">  Register </Link>, '5', <FormOutlined />),
     getItem(<Link to="/login"> Login </Link>, '6', <LoginOutlined />),
+    getItem(<Link to="/*"> Logout </Link>, '7', <LogoutOutlined />),
   ];
 
 const onFinish = (values) => {

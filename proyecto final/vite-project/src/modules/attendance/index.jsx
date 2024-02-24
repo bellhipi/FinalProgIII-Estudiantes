@@ -19,11 +19,11 @@ const Attendance = () => {
     };
 
     const onClick = (value) => {
-         const newAlumno = alumnos.map((a) => {
+        const newAlumno = alumnos.map((a) => {
             if (a.dni === value) {
                 return {
                     ...a,
-                    ausentes: a.ausentes+1
+                    ausentes: a.ausentes + 1
                 };
             } else {
                 return a;
@@ -107,8 +107,8 @@ const Attendance = () => {
 
                 )}
             />
-
-            <p>Cantidad total de alumnos: {alumnos.length}</p>
+            <br/>
+            <b>Cantidad total de alumnos: {alumnos.length}</b>
         </>)
 };
 export default Attendance

@@ -1,32 +1,72 @@
 [
+     {
+        "dni": 39560852,
+        "nombre": "CERCCIARO, Constanza",
+        "curso": 2,
+        "ausentes": 0,
+        "notas": [6,7,6,8,5,6,7,8,6,6,6,7,6,7]
+    },
+    {
+        "dni": 39560855,
+        "nombre": "GROPPA, María Inés",
+        "curso": 5,
+        "ausentes": 0,
+        "notas": [10,8,9,7,5,6,7,8,9,10,7,7,6,10]
+    },
+    {
+        "dni": 39560853,
+        "nombre": "HIPÓLITO, Lucía Micaela",
+        "curso": 3,
+        "ausentes": 0,
+        "notas": [10,9,8,9,10,9,8,8,9,10,8,8,9,10]
+    },
     {
         "dni": 39560846,
         "nombre": "HIPÓLITO, María Belén",
-        "curso": 4,
-        "ausentes": 0
+        "curso": 1,
+        "ausentes": 0,
+        "notas": [5,7,3,4,5,6,7,8,9,10,10,8,9]
     },
     {
-        "dni": 39560845,
-        "nombre": "HIPÓLITOss, María Belén",
-        "curso": 4,
-        "ausentes": 200
+        "dni": 39560850,
+        "nombre": "JUSTINIANO, Bárbara Adriana",
+        "curso": 5,
+        "ausentes": 0,
+        "notas": [1,2,3,4,5,6,7,8,5,1,6,1,3,1]
     },
     {
-        "dni": 39560844,
-        "nombre": "HIPÓLITOs, María Belén",
-        "curso": 4,
-        "ausentes": 190
-    },
-    {
-        "dni": 36560519,
+        "dni": 39560847,
         "nombre": "LAMELA, Daniel Fabián",
-        "curso": 3,
-        "ausentes": 0
+        "curso": 2,
+        "ausentes": 0,
+        "notas": [1,2,3,4,5,6,7,8,7,1,1,2,3,1]
     },
     {
-        "dni": 36560518,
-        "nombre": "LAMELAs, Daniel Fabián",
+        "dni": 39560848,
+        "nombre": "MERMOZ, Daniel Alberto",
         "curso": 3,
-        "ausentes": 1
+        "ausentes": 0,
+        "notas": [10,9,7,8,5,6,7,8,9,10,10,8,9,10]
+    },
+    {
+        "dni": 39560849,
+        "nombre": "MERMOZ, José",
+        "curso": 4,
+        "ausentes": 0,
+        "notas": [6,7,10,4,5,9,7,8,6,10,6,6,6,4,6]
+    },
+    {
+        "dni": 39560851,
+        "nombre": "SANCHEZ, Valeria",
+        "curso": 1,
+        "ausentes": 0,
+        "notas": [1,6,10,3,5,9,7,8,4,10,1,6,7]
+    },
+    {
+        "dni": 39560854,
+        "nombre": "TORRES, Cristina Beatríz",
+        "curso": 4,
+        "ausentes": 0,
+        "notas": [10,6,7,4,5,6,7,6,5,7,5,8,10,4,6]
     }
 ]
