@@ -1,53 +1,20 @@
-const mongoDB = require('./conection/mongoDB')
-import express, { json, request, urlencoded } from 'express';
+const express = require('express')
+const cors = require('cors');
+const indexRouter = require('./routes/index')
+const mongoDB = require('./configs/mongodb')
 
-const Curso = require ('./models/cursos')
-
-
-
-//import cookieParser from 'cookie-parser';
-//import logger from 'morgan';
-
-//import indexRouter from './routes/index.js';
-//import usersRouter from './routes/users.js';
 
 require('dotenv').config()
 mongoDB(process.env);
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 
-app.get('/', (request, response) => {
-    console.log(request)
-    return response.status(234).send('Holus')
-});
-
-app.post('/cursos', async (request, response) => {
-    try {
-        if(!request.body.id || !request.body.materias){
-            return response.status(400).send({
-                message: 'Enviados todos los archivos requeridos: id, materias'
-            })
-        }
-        const newCurso = {
-            id: request.body.id,
-            materias: request.body.materias
-        }
-        const curso = await Curso.create(newCurso)
-        return response.status(201).send(curso)
-    } catch (error) {
-        console.log(error.message)
-        response.status(500).send({ message: error.message })
-    }
-});
-
-
-
-/* app.use(logger('dev'));
-app.use(json());
-app.use(urlencoded({ extended: false }));
-app.use(cookieParser());
-
+//app.use(logger('dev'));
+//app.use(json());
+//app.use(urlencoded({ extended: false }));
+//app.use(cookieParser());
+app.use(cors())
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
- */
-export default app;
+
+app.listen(PORT, () => console.log('Server escuchando en el puerto', PORT))  

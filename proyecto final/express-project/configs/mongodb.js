@@ -1,11 +1,11 @@
-import mongoose from 'mongoose'
+const mongoose = require('mongoose')
 
  const conectDB = ({USER, PASSWORD, DBNAME}) => {
     require('dotenv').config()
     
-    const uri = `mongodb+srv://${USER}:${PASSWORD}@legiongym.hmfoq.mongodb.net/${DBNAME}?retryWrites=true&w=majority`;
+    const url = `mongodb+srv://${USER}:${PASSWORD}@mern-database.qpbfqgr.mongodb.net/${DBNAME}?retryWrites=true&w=majority&appName=mern-database`
 
-    mongoose.connect(uri)
+    mongoose.connect(url)
         .then(() => console.log('Base de datos conectada: ', DBNAME))
         .catch(e => console.log(e))   
 

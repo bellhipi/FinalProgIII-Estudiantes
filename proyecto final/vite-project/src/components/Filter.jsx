@@ -1,5 +1,6 @@
-import { useState, useEffect, React } from 'react'
-import listadoCursos from '../data/cursos.json'
+import { useContext, useState, useEffect, React } from 'react'
+//import listadoCursos from '../data/cursos.json'
+import { ApiContext } from '../context/apiContext';
 import { Select, Divider, List, Flex, Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 
@@ -8,6 +9,8 @@ const filterOption = (input, option) =>
     (option?.label ?? '').toLowerCase().includes(input.toLowerCase());
 
 const Filter = () => {
+    const { listadoCursos, getCursos } = useContext(ApiContext);
+    
     const [anios, setAnios] = useState([])
     const [materias, setMaterias] = useState([])
 
@@ -18,6 +21,7 @@ const Filter = () => {
 
     useEffect(() => {
         const timer = setTimeout(() => {
+            getCursos()
             console.log('Ejecutado despues de 5 segundos')
             setAnios(listadoCursos)
         }, 5000)
@@ -26,7 +30,8 @@ const Filter = () => {
 
     return (
         <>
-            {anios.length == 0 && materias.length == 0 ? (
+        {console.log(listadoCursos)}
+            {anios.length === 0 && materias.length === 0 ? (
                 <>
                     <Flex gap="large" vertical>
                         <Spin
