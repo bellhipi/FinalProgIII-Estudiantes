@@ -1,6 +1,7 @@
-import { useState, useEffect, React } from 'react'
-import listadoCursos from '../../data/cursos.json'
-import listadoAlumnos from '../../data/alumnos.json';
+import { useState, useContext, React } from 'react'
+//import listadoCursos from '../../data/cursos.json'
+//import listadoAlumnos from '../../data/alumnos.json';
+import { ApiContext } from '../../context/apiContext';
 import { Select, Divider, Typography, Table, Space } from 'antd';
 import Spinner from '../../components/Spinner';
 const { Title } = Typography;
@@ -24,9 +25,9 @@ const columns = [
 
 const ReportCard = () => {
 
+    const { listadoCursos, listadoAlumnos } = useContext(ApiContext);
     const [alumnos, setAlumnos] = useState([]);
     const [alumnosCurso, setAlumnosCurso] = useState([]);
-    const [anios, setAnios] = useState([]);
     const [materias, setMaterias] = useState([]);
     const [data, setData] = useState([]);
 
@@ -56,13 +57,13 @@ const ReportCard = () => {
         setData(aux)
     };
 
-    useEffect(() => {
+    /* useEffect(() => {
         const timer = setTimeout(() => {
             console.log('Ejecutado despues de 5 segundos')
             setAnios(listadoCursos)
         }, 5000)
         return () => clearTimeout(timer)
-    }, []);
+    }, []); */
 
     return (
         <>
@@ -70,7 +71,7 @@ const ReportCard = () => {
                 Boletín
             </Title>
 
-            {materias.length == 0 && alumnos.length == 0 && anios.length == 0 ? (
+            {!listadoCursos? (
                 <>
                     <Spinner />
                 </>
@@ -83,7 +84,7 @@ const ReportCard = () => {
                             optionFilterProp="course"
                             onChange={onChange}
                             filterOption={filterOption}
-                            options={anios.map((a) => ({
+                            options={listadoCursos.map((a) => ({
                                 label: `${a.id}° Año`,
                                 value: a.id,
                             }))}

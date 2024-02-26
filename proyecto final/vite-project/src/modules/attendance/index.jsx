@@ -1,6 +1,6 @@
 import { useState, useContext, React } from 'react'
 //import listadoCursos from '../../data/cursos.json'
-import listadoAlumnos from '../../data/alumnos.json';
+//import listadoAlumnos from '../../data/alumnos.json';
 import { ApiContext } from '../../context/apiContext';
 import { Select, Divider, List, Typography, Card, Button } from 'antd';
 import Spinner from '../../components/Spinner';
@@ -12,13 +12,11 @@ const filterOption = (input, option) =>
 
 const Attendance = () => {
 
-    const { listadoCursos,  } = useContext(ApiContext);
+    const { listadoCursos, listadoAlumnos } = useContext(ApiContext);
     const [alumnos, setAlumnos] = useState([]);
 
     const onChange = (value) => {
-        //console.log(listadoAlumnos.filter((a) => a.curso === value))
         setAlumnos(listadoAlumnos.filter((a) => a.curso === value))
-        //setAlumnos(listadoAlumnos)
     };
 
     const onClick = (value) => {

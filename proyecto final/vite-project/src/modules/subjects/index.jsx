@@ -13,7 +13,7 @@ const Subjects = () => {
   const { listadoCursos } = useContext(ApiContext);
   const [materias, setMaterias] = useState([])
 
-  const onChange = async (value) => {
+  const onChange = (value) => {
       const auxcursos = listadoCursos.filter((c) => c.id === value)
       setMaterias(auxcursos[0].materias)
   };

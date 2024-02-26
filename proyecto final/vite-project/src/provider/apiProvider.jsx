@@ -10,6 +10,7 @@ export const ApiProvider = ({ children }) => {
 
     useEffect(() => {
         getCursos()
+        getAlumnos()
       }, []);
 
     async function getCursos() {
@@ -21,7 +22,6 @@ export const ApiProvider = ({ children }) => {
     async function getAlumnos() {
         await api.get('/alumnos').then((response) => {
             setListadoAlumnos(response.data)
-            console.log(response.data)
         });
     }
 
