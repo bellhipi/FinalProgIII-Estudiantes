@@ -1,6 +1,4 @@
-import { createContext, useEffect, useState , React } from 'react'
-import { useNavigate } from 'react-router-dom'
-import api from '../service/api'
+import { createContext } from 'react'
 export const ApiContext = createContext(null)
 
 /* export const Context = ({ children }) => {

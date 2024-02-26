@@ -1,14 +1,15 @@
 import { useEffect, useState , React } from 'react'
-import { useNavigate } from 'react-router-dom'
+//import { useNavigate } from 'react-router-dom'
 import api from '../service/api'
 import { ApiContext } from "../context/apiContext"
 
 export const ApiProvider = ({ children }) => {
 
-    const [listadoCursos, setListadoCursos] = useState()
+    const [listadoCursos, setListadoCursos] = useState(0)
+    const [listadoAlumnos, setListadoAlumnos] = useState(0)
 
     useEffect(() => {
-        getCursos();
+        getCursos()
       }, []);
 
     async function getCursos() {
@@ -17,9 +18,16 @@ export const ApiProvider = ({ children }) => {
         });
     }
 
+    async function getAlumnos() {
+        await api.get('/alumnos').then((response) => {
+            setListadoAlumnos(response.data)
+            console.log(response.data)
+        });
+    }
+
     return (
         <ApiContext.Provider
-            value={{listadoCursos}}>
+            value={{listadoCursos, listadoAlumnos}}>
             {children}
         </ApiContext.Provider>
         

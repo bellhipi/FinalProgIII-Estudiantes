@@ -1,8 +1,8 @@
 import { useState, useEffect, React } from 'react'
 import listadoCursos from '../../data/cursos.json'
 import listadoAlumnos from '../../data/alumnos.json';
-import { Select, Divider, Typography, Flex, Spin, Table, Space } from 'antd';
-import { LoadingOutlined } from '@ant-design/icons';
+import { Select, Divider, Typography, Table, Space } from 'antd';
+import Spinner from '../../components/Spinner';
 const { Title } = Typography;
 
 // Filter `option.label` match the user type `input`
@@ -72,20 +72,8 @@ const ReportCard = () => {
 
             {materias.length == 0 && alumnos.length == 0 && anios.length == 0 ? (
                 <>
-                    <Flex gap="large" vertical>
-                        <Spin
-                            indicator={
-                                <LoadingOutlined
-                                    style={{
-                                        fontSize: 24,
-                                    }}
-                                    spin />
-                            }
-                        />
-                    </Flex>
-                    <br />
+                    <Spinner />
                 </>
-
             ) : (
                 <>
                     <Divider orientation="left">

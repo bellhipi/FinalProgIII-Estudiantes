@@ -1,8 +1,9 @@
-import { useState, useEffect, React } from 'react'
-import listadoCursos from '../../data/cursos.json'
+import { useState, useContext, React } from 'react'
+//import listadoCursos from '../../data/cursos.json'
 import listadoAlumnos from '../../data/alumnos.json';
-import { Select, Divider, List, Typography, Flex, Spin, Card, Button } from 'antd';
-import { LoadingOutlined } from '@ant-design/icons';
+import { ApiContext } from '../../context/apiContext';
+import { Select, Divider, List, Typography, Card, Button } from 'antd';
+import Spinner from '../../components/Spinner';
 const { Title } = Typography;
 
 // Filter `option.label` match the user type `input`
@@ -11,11 +12,13 @@ const filterOption = (input, option) =>
 
 const Attendance = () => {
 
+    const { listadoCursos,  } = useContext(ApiContext);
     const [alumnos, setAlumnos] = useState([]);
-    const [anios, setAnios] = useState([]);
 
     const onChange = (value) => {
+        //console.log(listadoAlumnos.filter((a) => a.curso === value))
         setAlumnos(listadoAlumnos.filter((a) => a.curso === value))
+        //setAlumnos(listadoAlumnos)
     };
 
     const onClick = (value) => {
@@ -32,36 +35,24 @@ const Attendance = () => {
         setAlumnos(newAlumno)
     };
 
-    useEffect(() => {
+/*     useEffect(() => {
         const timer = setTimeout(() => {
             console.log('Ejecutado despues de 5 segundos')
             setAnios(listadoCursos)
         }, 5000)
         return () => clearTimeout(timer)
     }, []);
-
+ */
     return (
         <>
             <Title>
                 Asistencia
             </Title>
 
-            {alumnos.length == 0 && anios.length == 0 ? (
+            {!listadoCursos ? (
                 <>
-                    <Flex gap="large" vertical>
-                        <Spin
-                            indicator={
-                                <LoadingOutlined
-                                    style={{
-                                        fontSize: 24,
-                                    }}
-                                    spin />
-                            }
-                        />
-                    </Flex>
-                    <br />
+                    <Spinner />
                 </>
-
             ) : (
                 <>
                     <Divider orientation="left">
@@ -71,7 +62,7 @@ const Attendance = () => {
                             optionFilterProp="course"
                             onChange={onChange}
                             filterOption={filterOption}
-                            options={anios.map((a) => ({
+                            options={listadoCursos.map((a) => ({
                                 label: `${a.id}° Año`,
                                 value: a.id,
                             }))}

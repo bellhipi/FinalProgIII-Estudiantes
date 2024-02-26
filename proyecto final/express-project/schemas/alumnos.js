@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const { ObjectID } = Schema.Types;
+const { ObjectID } = mongoose.Schema.Types;
 
 const alumnosSchema = mongoose.Schema({
     dni: {
