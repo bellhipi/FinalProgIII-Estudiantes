@@ -10,7 +10,6 @@ const filterOption = (input, option) =>
 
 const Filter = () => {
     const { listadoCursos } = useContext(ApiContext);
-    const [anios, setAnios] = useState([])
     const [materias, setMaterias] = useState([])
 
     const onChange = async (value) => {
@@ -18,19 +17,19 @@ const Filter = () => {
         setMaterias(auxcursos[0].materias)
     };
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            getCursos()
+    /* useEffect(() => {
+         const timer = setTimeout(() => {
             console.log('Ejecutado despues de 5 segundos')
-            setAnios(listadoCursos)
+             console.log('listadocursos filter',listadoCursos)
+            //setAnios(listadoCursos)
         }, 5000)
-        return () => clearTimeout(timer)
-    }, [])
-
+        return () => clearTimeout(timer) 
+    }, []) */
+    
+    if (!listadoCursos) return null;
     return (
         <>
-        {console.log(listadoCursos)}
-            {anios.length === 0 && materias.length === 0 ? (
+            {listadoCursos.length === 0 ? (
                 <>
                     <Flex gap="large" vertical>
                         <Spin
@@ -55,7 +54,7 @@ const Filter = () => {
                             optionFilterProp="course"
                             onChange={onChange}
                             filterOption={filterOption}
-                            options={anios.map((a) => ({
+                            options={listadoCursos.map((a) => ({
                                 label: `${a.id}° Año`,
                                 value: a.id,
                             }))}

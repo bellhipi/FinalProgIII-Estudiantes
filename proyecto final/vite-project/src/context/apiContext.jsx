@@ -1,9 +1,9 @@
 import { createContext, useEffect, useState , React } from 'react'
 import { useNavigate } from 'react-router-dom'
-import api from './api'
-export const ApiContext = createContext()
+import api from '../service/api'
+export const ApiContext = createContext(null)
 
-export const Context = ({ children }) => {
+/* export const Context = ({ children }) => {
     const [listadocursos, setListadoCursos] = useState()
 
     useEffect(() => {
@@ -22,10 +22,9 @@ export const Context = ({ children }) => {
     return (
         <ApiContext.Provider
             value={{
-                listadocursos,
-                getCursos
+                listadocursos
             }}>
             {children}
         </ApiContext.Provider>
     );
-};
+}; */
