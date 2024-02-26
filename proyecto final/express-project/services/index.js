@@ -11,7 +11,17 @@ async function getAlumnos(req, res) {
     res.send(arrayAlumnosDB);
 }
 
+async function updateAttendance(req, res) {
+    const id = req.body.id
+    const update = req.body.update
+    
+    const alumnosAusentesDB = await Alumno.findByIdAndUpdate(id, update);
+
+    res.send(alumnosAusentesDB);
+}
+
 module.exports = {
     getCursos: getCursos,
-    getAlumnos: getAlumnos
+    getAlumnos: getAlumnos,
+    updateAttendance: updateAttendance
 };

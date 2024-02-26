@@ -11,6 +11,7 @@ export const ApiProvider = ({ children }) => {
     useEffect(() => {
         getCursos()
         getAlumnos()
+        //updateAttendance()
       }, []);
 
     async function getCursos() {
@@ -25,9 +26,17 @@ export const ApiProvider = ({ children }) => {
         });
     }
 
+    async function updateAttendance(id, update) {
+        const data = {id, update}
+        console.log('data',data)
+        await api.post('/attendance', data).then((response) => {
+            getAlumnos()
+        });
+    }
+
     return (
         <ApiContext.Provider
-            value={{listadoCursos, listadoAlumnos}}>
+            value={{listadoCursos, listadoAlumnos, updateAttendance, getAlumnos}}>
             {children}
         </ApiContext.Provider>
         

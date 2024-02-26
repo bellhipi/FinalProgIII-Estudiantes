@@ -1,5 +1,6 @@
 const express = require('express')
 const cors = require('cors');
+const bodyParser = require('body-parser')
 const indexRouter = require('./routes/index')
 const mongoDB = require('./configs/mongodb')
 
@@ -14,6 +15,8 @@ const app = express();
 //app.use(json());
 //app.use(urlencoded({ extended: false }));
 //app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(cors())
 app.use('/', indexRouter);
 
