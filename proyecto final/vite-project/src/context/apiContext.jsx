@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import { createContext, useEffect, useState , React } from 'react'
 import { useNavigate } from 'react-router-dom'
 import api from './api'
-export const ApiContext = React.createContext(0)
+export const ApiContext = createContext()
 
 export const Context = ({ children }) => {
     const [listadocursos, setListadoCursos] = useState()

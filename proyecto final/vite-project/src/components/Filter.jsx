@@ -9,8 +9,7 @@ const filterOption = (input, option) =>
     (option?.label ?? '').toLowerCase().includes(input.toLowerCase());
 
 const Filter = () => {
-    const { listadoCursos, getCursos } = useContext(ApiContext);
-    
+    const { listadoCursos } = useContext(ApiContext);
     const [anios, setAnios] = useState([])
     const [materias, setMaterias] = useState([])
 
