@@ -22,14 +22,30 @@ async function getFilterMateria(req, res) {
         arrayNombresDB[i]=arrayMaterias[i].nombre
     }
     //arrayMaterias.forEach(element => { arrayNombresDB[index] = element.nombre});
-    console.log(arrayNombresDB);
-    res.send(arrayNombresDB);
+    res.send(arrayNombresDB.sort());
 }
 
 /* async function getNombreMateria(req, res){
     const nombreMateria = await Materia.findById(req,{_id:0, nombre:1}).exec();
     return(nombreMateria.nombre)
 } */
+
+async function getFilterAlumnos(req, res) {
+    const arrayAlumnosDB = await Alumno.find({cursoid: req.body.id},{_id:0, nombre:1, dni:1}).exec();
+    const arrayAlumnosOrdenados = arrayAlumnosDB.sort((a, b) => {
+        const nameA = a.nombre.toUpperCase(); // ignore upper and lowercase
+        const nameB = b.nombre.toUpperCase(); // ignore upper and lowercase
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+        // names must be equal
+        return 0;
+      });
+    res.send(arrayAlumnosOrdenados);
+}
 
 async function getAlumnos(req, res) {
     const arrayAlumnosDB = await Alumno.find({});
@@ -49,6 +65,7 @@ module.exports = {
     getCursos: getCursos,
     getNum : getNum,
     getFilterMateria : getFilterMateria,
+    getFilterAlumnos : getFilterAlumnos,
     getAlumnos: getAlumnos,
     updateAttendance: updateAttendance
 };

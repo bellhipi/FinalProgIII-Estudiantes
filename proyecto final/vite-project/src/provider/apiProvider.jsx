@@ -7,12 +7,14 @@ export const ApiProvider = ({ children }) => {
 
     const [listadoCursos, setListadoCursos] = useState(0)
     const [materias, setMaterias] = useState([])
-    const [listadoAlumnos, setListadoAlumnos] = useState(0)
+    const [alumnos, setAlumnos] = useState([])
+
+    //const [listadoAlumnos, setListadoAlumnos] = useState(0)
 
     useEffect(() => {
         //getCursos()
         getNumCursos()
-        getAlumnos()
+        //getAlumnos()
         //updateAttendance()
       }, []);
 
@@ -24,6 +26,7 @@ export const ApiProvider = ({ children }) => {
 
     async function getNumCursos() {
         await api.get('/cursosnum').then((response) => {
+            console.log(response.data)
             setListadoCursos(response.data)
         });
     }
@@ -32,6 +35,13 @@ export const ApiProvider = ({ children }) => {
         const data = {id}
         await api.post('/cursosmaterias', data).then((response) => {
             setMaterias(response.data)
+        });
+    }
+
+    async function getFiltrarAlumnos(id) {
+        const data = {id}
+        await api.post('/cursosalumnos', data).then((response) => {
+            setAlumnos(response.data)
         });
     }
 
@@ -50,7 +60,7 @@ export const ApiProvider = ({ children }) => {
 
     return (
         <ApiContext.Provider
-            value={{listadoCursos, listadoAlumnos, getFiltrarMateria, materias, updateAttendance}}>
+            value={{listadoCursos, getFiltrarMateria, materias, getFiltrarAlumnos, alumnos, updateAttendance}}>
             {children}
         </ApiContext.Provider>
         

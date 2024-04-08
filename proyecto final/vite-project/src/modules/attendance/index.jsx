@@ -12,11 +12,12 @@ const filterOption = (input, option) =>
 
 const Attendance = () => {
 
-    const { listadoCursos, listadoAlumnos, updateAttendance} = useContext(ApiContext);
-    const [alumnos, setAlumnos] = useState([]);
+    const { listadoCursos, getFiltrarAlumnos, alumnos} = useContext(ApiContext);
+    //const [alumnos, setAlumnos] = useState([]);
 
     const onChange = (value) => {
-        setAlumnos(listadoAlumnos.filter((a) => a.curso === value))
+        //setAlumnos(listadoAlumnos.filter((a) => a.curso === value))
+        getFiltrarAlumnos(value)
     };
 
     const onClick = (id, ausentes, value) => {
@@ -70,7 +71,7 @@ const Attendance = () => {
                             filterOption={filterOption}
                             options={listadoCursos.map((a) => ({
                                 label: `${a.id}° Año`,
-                                value: a.id,
+                                value: a._id,
                             }))}
                         />
                     </Divider>
