@@ -12,20 +12,19 @@ const filterOption = (input, option) =>
 
 const Attendance = () => {
 
-    const { listadoCursos, listadoAlumnos, updateAttendance } = useContext(ApiContext);
+    const { listadoCursos, listadoAlumnos, updateAttendance} = useContext(ApiContext);
     const [alumnos, setAlumnos] = useState([]);
 
     const onChange = (value) => {
         setAlumnos(listadoAlumnos.filter((a) => a.curso === value))
-        console.log('onchange')
     };
 
-    const onClick = (id, ausentes) => {
+    const onClick = (id, ausentes, value) => {
         const update = { ausentes: ausentes + 1 };
         updateAttendance(id, update)
-        console.log('onclick')
-        //onChange(curso)
-        /* const newAlumno = alumnos.map((a) => {
+        //setAlumnos(listadoAlumnos.filter((a) => a.curso === value))
+
+       /*  const newAlumno = alumnos.map((a) => {
             if (a.id === id) {
                 return {
                     ...a,
@@ -35,7 +34,8 @@ const Attendance = () => {
                 return a;
             }
         });
-        setAlumnos(newAlumno) */
+        console.log ('newAlumno', newAlumno)
+        setAlumnos(newAlumno)*/
     };
 
 /*     useEffect(() => {
@@ -51,7 +51,10 @@ const Attendance = () => {
             <Title>
                 Asistencia
             </Title>
-            {console.log('cuerpo',listadoAlumnos)}
+            {//console.log('cuerpo',listadoAlumnos)
+            }
+            {//console.log('alu',alumnos)
+            }
             {!listadoCursos ? (
                 <>
                     <Spinner />
@@ -84,7 +87,7 @@ const Attendance = () => {
                     <List.Item
                         actions={[<Card size="small" style={{ width: 75 }}>
                             <p>{item.ausentes}</p>
-                        </Card>, <Button type="link" onClick={() => {onClick(item._id, item.ausentes)}} disabled={item.ausentes >= 190}>
+                        </Card>, <Button type="link" onClick={() => {onClick(item._id, item.ausentes, item.curso),console.log("hola")}} disabled={item.ausentes >= 190}>
                             ausente
                         </Button>]
                         }

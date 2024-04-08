@@ -1,0 +1,282 @@
+[
+    {
+        "nombre": "Arte",
+        "curso": 1
+    },
+    {
+        "nombre": "Biología",
+        "curso": 1
+    },
+    {
+        "nombre": "Catequésis",
+        "curso": 1
+    },
+    {
+        "nombre": "Educación Física",
+        "curso": 1
+    },
+    {
+        "nombre": "Educación Tecnológica",
+        "curso": 1
+    },
+    {
+        "nombre": "Formación Ética y Ciudadana",
+        "curso": 1
+    },
+    {
+        "nombre": "Geografía",
+        "curso": 1
+    },
+    {
+        "nombre": "Historia",
+        "curso": 1
+    },
+    {
+        "nombre": "Inglés",
+        "curso": 1
+    },
+    {
+        "nombre": "Lengua y Literatura Castellana",
+        "curso": 1
+    },
+    {
+        "nombre": "Matemática",
+        "curso": 1
+    },
+    {
+        "nombre": "Técnicas de Estudio",
+        "curso": 1
+    },
+    {
+        "nombre": "Tutoría",
+        "curso": 1
+    },
+    {
+        "nombre": "Arte",
+        "curso": 2
+    },
+    {
+        "nombre": "Biología",
+        "curso": 2
+    },
+    {
+        "nombre": "Catequésis",
+        "curso": 2
+    },
+    {
+        "nombre": "Educación Física",
+        "curso": 2
+    },
+    {
+        "nombre": "Educación Tecnológica",
+        "curso": 2
+    },
+    {
+        "nombre": "Formación Ética y Ciudadana",
+        "curso": 2
+    },
+    {
+        "nombre": "Geografía",
+        "curso": 2
+    },
+    {
+        "nombre": "Historia",
+        "curso": 2
+    },
+    {
+        "nombre": "Inglés",
+        "curso": 2
+    },
+    {
+        "nombre": "Lengua y Literatura Castellana",
+        "curso": 2
+    },
+    {
+        "nombre": "Matemática",
+        "curso": 2
+    },
+    {
+        "nombre": "Taller de Comunicación",
+        "curso": 2
+    },
+    {
+        "nombre": "Técnicas de Estudio",
+        "curso": 2
+    },
+    {
+        "nombre": "Tutoría",
+        "curso": 2
+    },
+    {
+        "nombre": "Biología",
+        "curso": 3
+    },
+    {
+        "nombre": "Economía",
+        "curso": 3
+    },
+    {
+        "nombre": "EDI",
+        "curso": 3
+    },
+    {
+        "nombre": "Educación Física",
+        "curso": 3
+    },
+    {
+        "nombre": "Físicoquímica",
+        "curso": 3
+    },
+    {
+        "nombre": "Formación Ética y Ciudadana",
+        "curso": 3
+    },
+    {
+        "nombre": "Fundomentos de los Sistemas Contables y de Administración",
+        "curso": 3
+    },
+    {
+        "nombre": "Geografía",
+        "curso": 3
+    },
+    {
+        "nombre": "Historia",
+        "curso": 3
+    },
+    {
+        "nombre": "Inglés",
+        "curso": 3
+    },
+    {
+        "nombre": "Lengua y Literatura Castellana",
+        "curso": 3
+    },
+    {
+        "nombre": "Matemática",
+        "curso": 3
+    },
+    {
+        "nombre": "Organizaciones",
+        "curso": 3
+    },
+    {
+        "nombre": "Tecnologías de la Información",
+        "curso": 3
+    },
+    {
+        "nombre": "Administración de Personal",
+        "curso": 4
+    },
+    {
+        "nombre": "Arte",
+        "curso": 4
+    },
+    {
+        "nombre": "Catequésis",
+        "curso": 4
+    },
+    {
+        "nombre": "Economía",
+        "curso": 4
+    },
+    {
+        "nombre": "Educación Física",
+        "curso": 4
+    },
+    {
+        "nombre": "Física",
+        "curso": 4
+    },
+    {
+        "nombre": "Formación Ética y Ciudadana",
+        "curso": 4
+    },
+    {
+        "nombre": "Geografía",
+        "curso": 4
+    },
+    {
+        "nombre": "Historia",
+        "curso": 4
+    },
+    {
+        "nombre": "Inglés",
+        "curso": 4
+    },
+    {
+        "nombre": "Lengua y Literatura Castellana",
+        "curso": 4
+    },
+    {
+        "nombre": "Matemática",
+        "curso": 4
+    },
+    {
+        "nombre": "Sistemas Administrativos",
+        "curso": 4
+    },
+    {
+        "nombre": "Sistemas de Información Contable",
+        "curso": 4
+    },
+    {
+        "nombre": "Tecnologías de la Información",
+        "curso": 4
+    },
+    {
+        "nombre": "Catequésis",
+        "curso": 5
+    },
+    {
+        "nombre": "Contabilidad de Costos",
+        "curso": 5
+    },
+    {
+        "nombre": "Contabilidad Patrimonial y de Gestión",
+        "curso": 5
+    },
+    {
+        "nombre": "Derecho",
+        "curso": 5
+    },
+    {
+        "nombre": "Economía",
+        "curso": 5
+    },
+    {
+        "nombre": "Educación Física",
+        "curso": 5
+    },
+    {
+        "nombre": "Filosofía",
+        "curso": 5
+    },
+    {
+        "nombre": "Historia",
+        "curso": 5
+    },
+    {
+        "nombre": "Inglés Técnico",
+        "curso": 5
+    },
+    {
+        "nombre": "Lengua y Literatura Castellana",
+        "curso": 5
+    },
+    {
+        "nombre": "Matemática",
+        "curso": 5
+    },
+    {
+        "nombre": "Proyecto Organizacional",
+        "curso": 5
+    },
+    {
+        "nombre": "Química",
+        "curso": 5
+    },
+    {
+        "nombre": "Tecnologías de la Información",
+        "curso": 5
+    }
+]

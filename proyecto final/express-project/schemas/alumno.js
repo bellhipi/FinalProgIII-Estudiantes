@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const { ObjectID } = mongoose.Schema.Types;
 
-const alumnosSchema = mongoose.Schema({
+const alumnoSchema = new mongoose.Schema({
     dni: {
         type: Number,
         required: true
@@ -10,24 +10,27 @@ const alumnosSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    age: {
+        type: Number,
+        required: true
+    },
+    user: {
+        type: String,
+        required: true
+    },
+    password: {
+        type: String,
+        required: true
+    },
+    fnac: {
+        type: Date,
+        required: true
+    },
     cursoid: {
         type: ObjectID,
+        ref: 'Curso',
         required: true
-    },
-    curso: {
-        type: Number,
-        required: true
-    },
-    ausentes: {
-        type: Number,
-        required: true
-    },
-    notas: {
-        type: [Number],
-        required: true
-    },
+    }
 });
 
-const Alumno = mongoose.model('alumno', alumnosSchema);
-
-module.exports = Alumno;
+module.exports = mongoose.model('Alumno', alumnoSchema);

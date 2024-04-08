@@ -10,12 +10,13 @@ const filterOption = (input, option) =>
     (option?.label ?? '').toLowerCase().includes(input.toLowerCase());
 
 const Subjects = () => {
-  const { listadoCursos } = useContext(ApiContext);
-  const [materias, setMaterias] = useState([])
+  const { listadoCursos, materias, getFiltrarMateria } = useContext(ApiContext);
 
   const onChange = (value) => {
+    getFiltrarMateria(value)
+        /* console.log(value)
       const auxcursos = listadoCursos.filter((c) => c.id === value)
-      setMaterias(auxcursos[0].materias)
+      setMaterias(auxcursos[0].materias) */
   };
     /* useEffect(() => {
          const timer = setTimeout(() => {

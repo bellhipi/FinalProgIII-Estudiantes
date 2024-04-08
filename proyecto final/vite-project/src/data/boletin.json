@@ -1,0 +1,636 @@
+[
+    {
+       "alumnoid": "65f1b21d828d109e5a7edcd7",
+       "cursoid": "65db8d1c0390cbd6bb087658",
+       "ausentes": 0,
+       "notas": [
+           {
+               "materiaid": "65e87656893a0b978d8729e5",
+               "nota": 6
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729e6",
+               "nota": 7
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729e7",
+               "nota": 6
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729e8",
+               "nota": 8
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729e9",
+               "nota": 5
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729ea",
+               "nota": 6
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729eb",
+               "nota": 7
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729ec",
+               "nota": 8
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729ed",
+               "nota": 6
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729ee",
+               "nota": 6
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729ef",
+               "nota": 6
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729f0",
+               "nota": 7
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729f1",
+               "nota": 6
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729f2",
+               "nota": 7
+           }
+           ]
+   },
+   {
+       "alumnoid": "65f1b74b828d109e5a845deb",
+       "cursoid": "65db8d1c0390cbd6bb08765b",
+       "ausentes": 0,
+       "notas": [
+           {
+               "materiaid": "65e87656893a0b978d872a10",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a11",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a12",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a13",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a14",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a15",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a16",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a17",
+               "nota": 0
+           },
+
+           {
+               "materiaid": "65e87656893a0b978d872a18",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a19",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a1a",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a1b",
+               "nota": 0
+           },
+
+           {
+               "materiaid": "65e87656893a0b978d872a1c",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a1d",
+               "nota": 0
+           }
+       ]
+   },
+   {
+       "alumnoid": "65f1b74b828d109e5a845dec",
+       "cursoid": "65db8d1c0390cbd6bb087659",
+       "ausentes": 0,
+       "notas": [
+           {
+               "materiaid": "65e87656893a0b978d8729f3",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729f4",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729f5",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729f6",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729f7",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729f8",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729f9",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729fa",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729fb",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729fc",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729fd",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729fe",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729ff",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a00",
+               "nota": 0
+           }
+       ]
+   },
+   {
+       "alumnoid": "65f1b74b828d109e5a845ded",
+       "cursoid": "65db8d1c0390cbd6bb087657",
+       "ausentes": 0,
+       "notas": [
+           {
+               "materiaid": "65e87656893a0b978d8729d8",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729d9",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729da",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729db",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729dc",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729dd",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729de",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729df",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729e0",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729e1",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729e2",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729e3",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729e4",
+               "nota": 0
+           }
+       ]
+   },
+   {
+       "alumnoid": "65f1b74b828d109e5a845dee",
+       "cursoid": "65db8d1c0390cbd6bb08765b",
+       "ausentes": 0,
+       "notas": [
+           {
+               "materiaid": "65e87656893a0b978d872a10",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a11",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a12",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a13",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a14",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a15",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a16",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a17",
+               "nota": 0
+           },
+
+           {
+               "materiaid": "65e87656893a0b978d872a18",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a19",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a1a",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a1b",
+               "nota": 0
+           },
+
+           {
+               "materiaid": "65e87656893a0b978d872a1c",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a1d",
+               "nota": 0
+           }
+       ]
+   },
+   {
+       "alumnoid": "65f1b74b828d109e5a845def",
+       "cursoid": "65db8d1c0390cbd6bb087658",
+       "ausentes": 0,
+       "notas": [
+           {
+               "materiaid": "65e87656893a0b978d8729e5",
+               "nota": 6
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729e6",
+               "nota": 7
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729e7",
+               "nota": 6
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729e8",
+               "nota": 8
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729e9",
+               "nota": 5
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729ea",
+               "nota": 6
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729eb",
+               "nota": 7
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729ec",
+               "nota": 8
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729ed",
+               "nota": 6
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729ee",
+               "nota": 6
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729ef",
+               "nota": 6
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729f0",
+               "nota": 7
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729f1",
+               "nota": 6
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729f2",
+               "nota": 7
+           }
+           ]
+   },
+   {
+       "alumnoid": "65f1b74b828d109e5a845df0",
+       "cursoid": "65db8d1c0390cbd6bb087659",
+       "ausentes": 0,
+       "notas": [
+           {
+               "materiaid": "65e87656893a0b978d8729f3",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729f4",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729f5",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729f6",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729f7",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729f8",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729f9",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729fa",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729fb",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729fc",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729fd",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729fe",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729ff",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a00",
+               "nota": 0
+           }
+       ]
+   },
+   {
+       "alumnoid": "65f1b74b828d109e5a845df1",
+       "cursoid": "65db8d1c0390cbd6bb08765a",
+       "ausentes": 0,
+       "notas": [
+           {
+               "materiaid": "65e87656893a0b978d872a01",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a02",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a03",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a04",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a05",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a06",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a07",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a08",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a09",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a0a",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a0b",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a0c",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a0d",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a0e",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a0f",
+               "nota": 0
+           }
+       ]
+   },
+   {
+       "alumnoid": "65f1b74b828d109e5a845df2",
+       "cursoid": "65db8d1c0390cbd6bb087657",
+       "ausentes": 0,
+       "notas": [
+           {
+               "materiaid": "65e87656893a0b978d8729d8",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729d9",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729da",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729db",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729dc",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729dd",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729de",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729df",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729e0",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729e1",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729e2",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729e3",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d8729e4",
+               "nota": 0
+           }
+       ]
+   },
+   {
+       "alumnoid": "65f1b74b828d109e5a845df3",
+       "cursoid": "65db8d1c0390cbd6bb08765a",
+       "ausentes": 0,
+       "notas": [
+           {
+               "materiaid": "65e87656893a0b978d872a01",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a02",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a03",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a04",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a05",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a06",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a07",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a08",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a09",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a0a",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a0b",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a0c",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a0d",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a0e",
+               "nota": 0
+           },
+           {
+               "materiaid": "65e87656893a0b978d872a0f",
+               "nota": 0
+           }
+       ]
+   }
+]

@@ -6,17 +6,32 @@ import { ApiContext } from "../context/apiContext"
 export const ApiProvider = ({ children }) => {
 
     const [listadoCursos, setListadoCursos] = useState(0)
+    const [materias, setMaterias] = useState([])
     const [listadoAlumnos, setListadoAlumnos] = useState(0)
 
     useEffect(() => {
-        getCursos()
+        //getCursos()
+        getNumCursos()
         getAlumnos()
         //updateAttendance()
       }, []);
 
-    async function getCursos() {
+/*     async function getCursos() {
         await api.get('/cursos').then((response) => {
             setListadoCursos(response.data)
+        });
+    } */
+
+    async function getNumCursos() {
+        await api.get('/cursosnum').then((response) => {
+            setListadoCursos(response.data)
+        });
+    }
+
+    async function getFiltrarMateria(id) {
+        const data = {id}
+        await api.post('/cursosmaterias', data).then((response) => {
+            setMaterias(response.data)
         });
     }
 
@@ -28,7 +43,6 @@ export const ApiProvider = ({ children }) => {
 
     async function updateAttendance(id, update) {
         const data = {id, update}
-        console.log('data',data)
         await api.post('/attendance', data).then((response) => {
             getAlumnos()
         });
@@ -36,7 +50,7 @@ export const ApiProvider = ({ children }) => {
 
     return (
         <ApiContext.Provider
-            value={{listadoCursos, listadoAlumnos, updateAttendance, getAlumnos}}>
+            value={{listadoCursos, listadoAlumnos, getFiltrarMateria, materias, updateAttendance}}>
             {children}
         </ApiContext.Provider>
         

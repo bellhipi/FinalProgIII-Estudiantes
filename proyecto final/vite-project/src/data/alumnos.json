@@ -1,82 +1,92 @@
 [
-     {
-        "dni": 39560852,
+    {
         "nombre": "CERCCIARO, Constanza",
-        "cursoid": "65db8d1c0390cbd6bb087658",
-        "curso": 2,
-        "ausentes": 0,
-        "notas": [6,7,6,8,5,6,7,8,6,6,6,7,6,7]
+        "dni": 39560852,
+        "age": 17,
+        "user": "constanza",
+        "password": "alu",
+        "fnac": "1996-03-29",
+        "cursoid": "65db8d1c0390cbd6bb087658"
     },
     {
         "dni": 39560855,
         "nombre": "GROPPA, María Inés",
-        "cursoid": "65db8d1c0390cbd6bb08765b",
-        "curso": 5,
-        "ausentes": 0,
-        "notas": [10,8,9,7,5,6,7,8,9,10,7,7,6,10]
+        "age": 17,
+        "user": "mines",
+        "password": "alu",
+        "fnac": "1996-06-30",
+        "cursoid": "65db8d1c0390cbd6bb08765b"
     },
     {
         "dni": 39560853,
         "nombre": "HIPÓLITO, Lucía Micaela",
-        "cursoid": "65db8d1c0390cbd6bb087659",
-        "curso": 3,
-        "ausentes": 0,
-        "notas": [10,9,8,9,10,9,8,8,9,10,8,8,9,10]
+        "age": 17,
+        "user": "lucia",
+        "password": "alu",
+        "fnac": "2005-07-12",
+        "cursoid": "65db8d1c0390cbd6bb087659"
     },
     {
         "dni": 39560846,
         "nombre": "HIPÓLITO, María Belén",
-        "cursoid": "65db8d1c0390cbd6bb087657",
-        "curso": 1,
-        "ausentes": 0,
-        "notas": [5,7,3,4,5,6,7,8,9,10,10,8,9]
+        "age": 17,
+        "user": "mbelen",
+        "password": "alu",
+        "fnac": "1996-03-29",
+        "cursoid": "65db8d1c0390cbd6bb087657"
     },
     {
         "dni": 39560850,
         "nombre": "JUSTINIANO, Bárbara Adriana",
-        "cursoid": "65db8d1c0390cbd6bb08765b",
-        "curso": 5,
-        "ausentes": 0,
-        "notas": [1,2,3,4,5,6,7,8,5,1,6,1,3,1]
+        "age": 17,
+        "user": "barbie",
+        "password": "alu",
+        "fnac": "1996-06-30",
+        "cursoid": "65db8d1c0390cbd6bb08765b"
     },
     {
         "dni": 39560847,
         "nombre": "LAMELA, Daniel Fabián",
-        "cursoid": "65db8d1c0390cbd6bb087658",
-        "curso": 2,
-        "ausentes": 0,
-        "notas": [1,2,3,4,5,6,7,8,7,1,1,2,3,1]
+        "age": 17,
+        "user": "danielf",
+        "password": "alu",
+        "fnac": "1991-12-20",
+        "cursoid": "65db8d1c0390cbd6bb087658"
     },
     {
         "dni": 39560848,
         "nombre": "MERMOZ, Daniel Alberto",
-        "cursoid": "65db8d1c0390cbd6bb087659",
-        "curso": 3,
-        "ausentes": 0,
-        "notas": [10,9,7,8,5,6,7,8,9,10,10,8,9,10]
+        "age": 17,
+        "user": "daniela",
+        "password": "alu",
+        "fnac": "1990-11-18",
+        "cursoid": "65db8d1c0390cbd6bb087659"
     },
     {
         "dni": 39560849,
         "nombre": "MERMOZ, José",
-        "cursoid": "65db8d1c0390cbd6bb08765a",
-        "curso": 4,
-        "ausentes": 0,
-        "notas": [6,7,10,4,5,9,7,8,6,10,6,6,6,4,6]
+        "age": 17,
+        "user": "jose",
+        "password": "alu",
+        "fnac": "1996-03-07",
+        "cursoid": "65db8d1c0390cbd6bb08765a"
     },
     {
         "dni": 39560851,
         "nombre": "SANCHEZ, Valeria",
-        "cursoid": "65db8d1c0390cbd6bb087657",
-        "curso": 1,
-        "ausentes": 0,
-        "notas": [1,6,10,3,5,9,7,8,4,10,1,6,7]
+        "age": 17,
+        "user": "valeria",
+        "password": "alu",
+        "fnac": "1996-05-23",
+        "cursoid": "65db8d1c0390cbd6bb087657"
     },
     {
         "dni": 39560854,
         "nombre": "TORRES, Cristina Beatríz",
-        "cursoid": "65db8d1c0390cbd6bb08765a",
-        "curso": 4,
-        "ausentes": 0,
-        "notas": [10,6,7,4,5,6,7,6,5,7,5,8,10,4,6]
+        "age": 17,
+        "user": "cristina",
+        "password": "alu",
+        "fnac": "1996-02-15",
+        "cursoid": "65db8d1c0390cbd6bb08765a"
     }
 ]
