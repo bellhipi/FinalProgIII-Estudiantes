@@ -24,11 +24,20 @@ async function getFilterMateria(req, res) {
     //arrayMaterias.forEach(element => { arrayNombresDB[index] = element.nombre});
     res.send(arrayNombresDB.sort());
 }
-
 /* async function getNombreMateria(req, res){
     const nombreMateria = await Materia.findById(req,{_id:0, nombre:1}).exec();
     return(nombreMateria.nombre)
 } */
+//------------------------modificar
+async function getFilterMateriaById(req, res) {
+    const arrayMateriasDB = await Curso.find({id: req.body.id},{_id:0, materias:1}).populate('materias').exec();
+    const arrayMaterias = arrayMateriasDB[0].materias
+    const arrayNombresDB = []
+    for( var i = 0; i<arrayMaterias.length; i++){
+        arrayNombresDB[i]=arrayMaterias[i].nombre
+    }
+    res.send(arrayNombresDB.sort());
+}
 
 async function getFilterAlumnos(req, res) {
     const arrayAlumnosDB = await Alumno.find({cursoid: req.body.id},{_id:0, nombre:1, dni:1}).exec();

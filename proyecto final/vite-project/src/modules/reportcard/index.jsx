@@ -25,16 +25,15 @@ const columns = [
 
 const ReportCard = () => {
 
-    const { listadoCursos, listadoAlumnos } = useContext(ApiContext);
-    const [alumnos, setAlumnos] = useState([]);
-    const [alumnosCurso, setAlumnosCurso] = useState([]);
-    const [materias, setMaterias] = useState([]);
+    const { listadoCursos, getFiltrarAlumnos, alumnos, getFiltrarMateria, materias } = useContext(ApiContext);
     const [data, setData] = useState([]);
 
     const onChange = (value) => {
-        const auxcursos = listadoCursos.filter((c) => c.id === value)
+        getFiltrarAlumnos(value)
+        getFiltrarMateria(value)
+        /* const auxcursos = listadoCursos.filter((c) => c.id === value)
         setAlumnosCurso(listadoAlumnos.filter((a) => a.curso === value))
-        setMaterias(auxcursos[0].materias)
+        setMaterias(auxcursos[0].materias) */
     };
 
     const onChangeAlu = (value) => {
@@ -86,7 +85,7 @@ const ReportCard = () => {
                             filterOption={filterOption}
                             options={listadoCursos.map((a) => ({
                                 label: `${a.id}° Año`,
-                                value: a.id,
+                                value: a._id,
                             }))}
                         />
                     </Divider>
@@ -106,7 +105,7 @@ const ReportCard = () => {
                             optionFilterProp="student"
                             onChange={onChangeAlu}
                             filterOption={filterOption}
-                            options={alumnosCurso.map((a) => ({
+                            options={alumnos.map((a) => ({
                                 label: a.nombre,
                                 value: a.dni,
                             }))}

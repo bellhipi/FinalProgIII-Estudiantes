@@ -14,6 +14,7 @@ export const ApiProvider = ({ children }) => {
     useEffect(() => {
         //getCursos()
         getNumCursos()
+        //llamar desde el login
         //getAlumnos()
         //updateAttendance()
       }, []);
@@ -23,7 +24,7 @@ export const ApiProvider = ({ children }) => {
             setListadoCursos(response.data)
         });
     } */
-
+ ///estas funciones van en service 
     async function getNumCursos() {
         await api.get('/cursosnum').then((response) => {
             console.log(response.data)
