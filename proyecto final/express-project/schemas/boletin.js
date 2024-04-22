@@ -26,8 +26,8 @@ const boletinSchema = new mongoose.Schema({
     notas: {
         //type: [{type: subSchema}]
         //type: {type: [subSchema]}
-        //type: [subSchema],
-        //required: true
+        type: [subSchema],
+        required: true
     },
     alumnoid: {
         type: ObjectID,
