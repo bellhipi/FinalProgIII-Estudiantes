@@ -1,6 +1,7 @@
 const Curso = require("../schemas/curso")
 const Alumno = require("../schemas/alumno")
 const Materia = require("../schemas/materia")
+const Boletin = require("../schemas/boletin")
 
 async function getCursos(req, res) {
     const arrayCursosDB = await Curso.find({});
@@ -28,19 +29,10 @@ async function getFilterMateria(req, res) {
     const nombreMateria = await Materia.findById(req,{_id:0, nombre:1}).exec();
     return(nombreMateria.nombre)
 } */
-//------------------------modificar
-async function getFilterMateriaById(req, res) {
-    const arrayMateriasDB = await Curso.find({id: req.body.id},{_id:0, materias:1}).populate('materias').exec();
-    const arrayMaterias = arrayMateriasDB[0].materias
-    const arrayNombresDB = []
-    for( var i = 0; i<arrayMaterias.length; i++){
-        arrayNombresDB[i]=arrayMaterias[i].nombre
-    }
-    res.send(arrayNombresDB.sort());
-}
+
 
 async function getFilterAlumnos(req, res) {
-    const arrayAlumnosDB = await Alumno.find({cursoid: req.body.id},{_id:0, nombre:1, dni:1}).exec();
+    const arrayAlumnosDB = await Alumno.find({cursoid: req.body.id},{nombre:1, dni:1}).exec();
     const arrayAlumnosOrdenados = arrayAlumnosDB.sort((a, b) => {
         const nameA = a.nombre.toUpperCase(); // ignore upper and lowercase
         const nameB = b.nombre.toUpperCase(); // ignore upper and lowercase
@@ -53,7 +45,17 @@ async function getFilterAlumnos(req, res) {
         // names must be equal
         return 0;
       });
+      console.log(arrayAlumnosOrdenados)
     res.send(arrayAlumnosOrdenados);
+}
+
+async function getFilterBoletin(req, res) {
+    console.log(req.body.id)
+
+    const arrayNotasDB = await Boletin.find({});
+
+      console.log(arrayNotasDB)
+    res.send(arrayNotasDB);
 }
 
 async function getAlumnos(req, res) {
@@ -75,6 +77,7 @@ module.exports = {
     getNum : getNum,
     getFilterMateria : getFilterMateria,
     getFilterAlumnos : getFilterAlumnos,
+    getFilterBoletin : getFilterBoletin,
     getAlumnos: getAlumnos,
     updateAttendance: updateAttendance
 };

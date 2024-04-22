@@ -25,24 +25,24 @@ const columns = [
 
 const ReportCard = () => {
 
-    const { listadoCursos, getFiltrarAlumnos, alumnos, getFiltrarMateria, materias } = useContext(ApiContext);
-    const [data, setData] = useState([]);
+    const { listadoCursos, getFiltrarAlumnos, alumnos, getFiltrarBoletin, boletin } = useContext(ApiContext);
 
     const onChange = (value) => {
         getFiltrarAlumnos(value)
-        getFiltrarMateria(value)
+        
         /* const auxcursos = listadoCursos.filter((c) => c.id === value)
         setAlumnosCurso(listadoAlumnos.filter((a) => a.curso === value))
         setMaterias(auxcursos[0].materias) */
     };
 
     const onChangeAlu = (value) => {
-        const auxalumnos = listadoAlumnos.filter((a) => a.dni === value)
+        getFiltrarBoletin(value)
+       /*  const auxalumnos = listadoAlumnos.filter((a) => a.dni === value)
         setAlumnos(auxalumnos)
-        crearData(auxalumnos[0].notas, materias)
+        crearData(auxalumnos[0].notas, materias) */
     };
 
-    const crearData = (n, m) => {
+    /* const crearData = (n, m) => {
         let aux = [];
         for (let i = 0; i < m.length; i++) {
             aux[i] = {
@@ -55,7 +55,7 @@ const ReportCard = () => {
         console.log('data', aux)
         setData(aux)
     };
-
+ */
     /* useEffect(() => {
         const timer = setTimeout(() => {
             console.log('Ejecutado despues de 5 segundos')
@@ -107,10 +107,10 @@ const ReportCard = () => {
                             filterOption={filterOption}
                             options={alumnos.map((a) => ({
                                 label: a.nombre,
-                                value: a.dni,
+                                value: a._id,
                             }))}
                         />
-                        <Table dataSource={data} columns={columns} />
+                        <Table dataSource={boletin} columns={columns} />
                     </Space>
 
                 </>
