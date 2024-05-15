@@ -41,7 +41,7 @@ export const ApiProvider = ({ children }) => {
 
     async function getFiltrarBoletin(id) {
         const data = {id}
-        await api.post('/boletin', data).then((response) => {
+        await api.get('/boletin').then((response) => {
     
             setBoletin(response.data)
         });
