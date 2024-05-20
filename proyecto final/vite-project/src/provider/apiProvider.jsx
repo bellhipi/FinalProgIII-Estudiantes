@@ -34,7 +34,7 @@ export const ApiProvider = ({ children }) => {
 
     async function getFiltrarMateria(id) {
         const data = {id}
-        await api.post('/cursosmaterias', data).then((response) => {
+        await api.post('/cursosmat', data).then((response) => {
             setMaterias(response.data)
         });
     }   

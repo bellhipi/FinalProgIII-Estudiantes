@@ -1,4 +1,5 @@
 const Curso = require("../schemas/curso")
+const Materia = require("../schemas/materia")
 
 async function getCursos(req, res) {
     const arrayCursosDB = await Curso.find({});
