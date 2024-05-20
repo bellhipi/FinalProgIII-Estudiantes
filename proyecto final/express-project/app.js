@@ -1,7 +1,9 @@
 const express = require('express')
 const cors = require('cors');
 const bodyParser = require('body-parser')
-const indexRouter = require('./routes/index')
+const cursoRouter = require('./routes/curso')
+const alumnoRouter = require('./routes/alumno')
+const boletinRouter = require('./routes/boletin')
 const mongoDB = require('./configs/mongodb')
 
 
@@ -18,6 +20,8 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors())
-app.use('/', indexRouter);
+app.use('/', cursoRouter);
+app.use('/', alumnoRouter);
+app.use('/', boletinRouter);
 
 app.listen(PORT, () => console.log('Server escuchando en el puerto', PORT))  
