@@ -14,7 +14,7 @@ async function getFilterAlumnos(req, res) {
         // names must be equal
         return 0;
       });
-      console.log(arrayAlumnosOrdenados)
+      
     res.send(arrayAlumnosOrdenados);
 }
 

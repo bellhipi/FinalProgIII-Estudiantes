@@ -27,7 +27,7 @@ export const ApiProvider = ({ children }) => {
  ///estas funciones van en service 
     async function getNumCursos() {
         await api.get('/cursosnum').then((response) => {
-            console.log(response.data)
+            
             setListadoCursos(response.data)
         });
     }
