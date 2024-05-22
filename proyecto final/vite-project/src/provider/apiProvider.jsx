@@ -27,14 +27,14 @@ export const ApiProvider = ({ children }) => {
  ///estas funciones van en service 
     async function getNumCursos() {
         await api.get('/cursosnum').then((response) => {
-            console.log(response.data)
+            
             setListadoCursos(response.data)
         });
     }
 
     async function getFiltrarMateria(id) {
         const data = {id}
-        await api.post('/cursosmaterias', data).then((response) => {
+        await api.post('/cursosmat', data).then((response) => {
             setMaterias(response.data)
         });
     }   

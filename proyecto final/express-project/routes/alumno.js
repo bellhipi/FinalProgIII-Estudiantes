@@ -1,11 +1,7 @@
 const express = require("express")
 const router = express.Router()
-const services = require("../services")
+const services = require("../services/alumno")
 
-router.get("/cursos", services.getCursos)
-router.get("/cursosnum", services.getNum)
-router.post("/cursosmaterias", services.getFilterMateria)
-router.get("/boletin", services.getFilterBoletin)
 router.post("/cursosalumnos", services.getFilterAlumnos)
 router.get("/alumnos", services.getAlumnos)
 router.post("/attendance", services.updateAttendance)
