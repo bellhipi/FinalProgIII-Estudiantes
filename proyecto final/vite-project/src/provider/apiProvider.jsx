@@ -24,10 +24,9 @@ export const ApiProvider = ({ children }) => {
             setListadoCursos(response.data)
         });
     } */
- ///estas funciones van en service 
+ ///estas funciones van en service separadas por entidades y el api provider lo elimino
     async function getNumCursos() {
         await api.get('/cursosnum').then((response) => {
-            
             setListadoCursos(response.data)
         });
     }
@@ -41,8 +40,7 @@ export const ApiProvider = ({ children }) => {
 
     async function getFiltrarBoletin(id) {
         const data = {id}
-        await api.get('/boletin').then((response) => {
-    
+        await api.post('/boletin', data).then((response) => {
             setBoletin(response.data)
         });
     }
@@ -53,6 +51,7 @@ export const ApiProvider = ({ children }) => {
             setAlumnos(response.data)
         });
     }
+    
     async function getAlumnos() {
         await api.get('/alumnos').then((response) => {
             setListadoAlumnos(response.data)

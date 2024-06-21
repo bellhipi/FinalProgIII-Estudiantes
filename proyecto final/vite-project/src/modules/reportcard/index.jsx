@@ -13,13 +13,13 @@ const filterOption = (input, option) =>
 const columns = [
     {
         title: 'Materias',
-        dataIndex: 'materia',
-        key: 'materia',
+        dataIndex: 'nombre',
+        key: 'key',
     },
     {
         title: 'Notas',
-        dataIndex: 'nota',
-        key: 'nota',
+        dataIndex: 'numero',
+        key: 'key',
     }
 ];
 

@@ -4,10 +4,6 @@ const materiaSchema = new mongoose.Schema({
     nombre: {
         type: String,
         required: true
-    },
-    curso: {
-        type: Number,
-        required: true
     }
 });
 
