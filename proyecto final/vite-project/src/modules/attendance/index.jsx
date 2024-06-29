@@ -12,17 +12,19 @@ const filterOption = (input, option) =>
 
 const Attendance = () => {
 
-    const { listadoCursos, getFiltrarAlumnos, alumnos} = useContext(ApiContext);
+    const { listadoCursos, getFiltrarAusentes, alumnos, updateAttendance} = useContext(ApiContext);
     //const [alumnos, setAlumnos] = useState([]);
 
     const onChange = (value) => {
         //setAlumnos(listadoAlumnos.filter((a) => a.curso === value))
-        getFiltrarAlumnos(value)
+        getFiltrarAusentes(value)
     };
 
     const onClick = (id, ausentes, value) => {
-        const update = { ausentes: ausentes + 1 };
+        const update = { ausentes: ausentes + 1 }
         updateAttendance(id, update)
+        getFiltrarAusentes(value)
+
         //setAlumnos(listadoAlumnos.filter((a) => a.curso === value))
 
        /*  const newAlumno = alumnos.map((a) => {
@@ -88,7 +90,7 @@ const Attendance = () => {
                     <List.Item
                         actions={[<Card size="small" style={{ width: 75 }}>
                             <p>{item.ausentes}</p>
-                        </Card>, <Button type="link" onClick={() => {onClick(item._id, item.ausentes, item.curso),console.log("hola")}} disabled={item.ausentes >= 190}>
+                        </Card>, <Button type="link" onClick={() => {onClick(item._id, item.ausentes, item.curso)}} disabled={item.ausentes >= 190}>
                             ausente
                         </Button>]
                         }

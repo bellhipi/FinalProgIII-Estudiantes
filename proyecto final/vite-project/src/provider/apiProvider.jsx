@@ -47,11 +47,18 @@ export const ApiProvider = ({ children }) => {
 
     async function getFiltrarAlumnos(id) {
         const data = {id}
-        await api.post('/cursosalumnos', data).then((response) => {
+        await api.post('/alumnoscurso', data).then((response) => {
             setAlumnos(response.data)
         });
     }
-    
+
+    async function getFiltrarAusentes(id) {
+        const data = {id}
+        await api.post('/boletinaus', data).then((response) => {
+            setAlumnos(response.data)
+        });
+    }
+
     async function getAlumnos() {
         await api.get('/alumnos').then((response) => {
             setListadoAlumnos(response.data)
@@ -61,13 +68,13 @@ export const ApiProvider = ({ children }) => {
     async function updateAttendance(id, update) {
         const data = {id, update}
         await api.post('/attendance', data).then((response) => {
-            getAlumnos()
+            //getAlumnos()
         });
     }
 
     return (
         <ApiContext.Provider
-            value={{listadoCursos, getFiltrarMateria, getFiltrarBoletin, boletin, materias, getFiltrarAlumnos, alumnos, updateAttendance}}>
+            value={{listadoCursos, getFiltrarMateria, getFiltrarBoletin, boletin, materias, getFiltrarAlumnos, getFiltrarAusentes, alumnos, updateAttendance}}>
             {children}
         </ApiContext.Provider>
         
