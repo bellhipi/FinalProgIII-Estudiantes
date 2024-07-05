@@ -1,7 +1,6 @@
-import { useState, useContext, React } from 'react'
-//import listadoCursos from '../../data/cursos.json'
-//import listadoAlumnos from '../../data/alumnos.json';
-import { ApiContext } from '../../context/apiContext';
+import { useState, useEffect, React } from 'react'
+import curService from '../../service/curso';
+import boleService from '../../service/boletin';
 import { Select, Divider, List, Typography, Card, Button } from 'antd';
 import Spinner from '../../components/Spinner';
 const { Title } = Typography;
@@ -12,52 +11,41 @@ const filterOption = (input, option) =>
 
 const Attendance = () => {
 
-    const { listadoCursos, getFiltrarAusentes, alumnos, updateAttendance} = useContext(ApiContext);
-    //const [alumnos, setAlumnos] = useState([]);
+    const [alumnos, setAlumnos] = useState([])
+    const [listadoCursos, setListadoCursos] = useState(0)
 
-    const onChange = (value) => {
-        //setAlumnos(listadoAlumnos.filter((a) => a.curso === value))
-        getFiltrarAusentes(value)
-    };
+    useEffect(() => {
+        const NumCursos = async () => {
+            await curService.getNumCursos().then((response) => {
+                setListadoCursos(response.data)
+            });
+        }
+        NumCursos()
+    }, [])
 
-    const onClick = (id, ausentes, value) => {
-        const update = { ausentes: ausentes + 1 }
-        updateAttendance(id, update)
-        getFiltrarAusentes(value)
-
-        //setAlumnos(listadoAlumnos.filter((a) => a.curso === value))
-
-       /*  const newAlumno = alumnos.map((a) => {
-            if (a.id === id) {
-                return {
-                    ...a,
-                    ausentes: a.ausentes + 1
-                };
-            } else {
-                return a;
-            }
+    const onChange = async (idcur) => {
+        const data = { idcur }
+        await boleService.getFiltrarAusentes(data).then((response) => {
+            setAlumnos(response.data)
         });
-        console.log ('newAlumno', newAlumno)
-        setAlumnos(newAlumno)*/
     };
 
-/*     useEffect(() => {
-        const timer = setTimeout(() => {
-            console.log('Ejecutado despues de 5 segundos')
-            setAnios(listadoCursos)
-        }, 5000)
-        return () => clearTimeout(timer)
-    }, []);
- */
+    const onClick = async (idalu, ausentes, idcur) => {
+        const update = { ausentes: ausentes + 1 }
+        const data = { idalu, update }
+        await boleService.updateAttendance(data).then((response) => {
+        });
+        boleService.getFiltrarAusentes({idcur}).then((response) => {
+            setAlumnos(response.data)
+        }); 
+    };
+
     return (
         <>
             <Title>
                 Asistencia
             </Title>
-            {//console.log('cuerpo',listadoAlumnos)
-            }
-            {//console.log('alu',alumnos)
-            }
+
             {!listadoCursos ? (
                 <>
                     <Spinner />
@@ -90,7 +78,7 @@ const Attendance = () => {
                     <List.Item
                         actions={[<Card size="small" style={{ width: 75 }}>
                             <p>{item.ausentes}</p>
-                        </Card>, <Button type="link" onClick={() => {onClick(item._id, item.ausentes, item.curso)}} disabled={item.ausentes >= 190}>
+                        </Card>, <Button type="link" onClick={() => { onClick(item._id, item.ausentes, item.curso) }} disabled={item.ausentes >= 190}>
                             ausente
                         </Button>]
                         }
@@ -107,7 +95,7 @@ const Attendance = () => {
 
                 )}
             />
-            <br/>
+            <br />
             <b>Cantidad total de alumnos: {alumnos.length}</b>
         </>)
 };

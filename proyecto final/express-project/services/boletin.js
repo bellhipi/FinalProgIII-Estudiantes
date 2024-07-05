@@ -9,7 +9,7 @@ const Boletin = require("../schemas/boletin")
 */
 
 async function getFilterBoletin(req, res) {
-  const arrayNotasDB = await Boletin.find({ alumnoid: req.body.id }, { _id: 0, notas: 1 }).populate('notas.materiaid').exec();
+  const arrayNotasDB = await Boletin.find({ alumnoid: req.body.idalu }, { _id: 0, notas: 1 }).populate('notas.materiaid').exec();
   const notas = arrayNotasDB[0].notas
 
   const arrayNotas = []
@@ -41,7 +41,7 @@ async function getFilterBoletin(req, res) {
 async function getFilterAusentes(req, res) {
   //  const arrayAlumnosDB = await Boletin.find({cursoid: req.body.id},{_id:0, ausentes:1}).populate('alumnoid').exec();
   //const arrayAlumnosDB = await Boletin.find({ cursoid: req.body.id }, { _id: 0, ausentes: 1 }).populate('alumnoid').populate({ path: 'cursoid', select: 'id' }).exec();
-  const arrayAlumnosDB = await Boletin.find({ cursoid: req.body.id }, { _id: 0, ausentes: 1 }).populate('alumnoid').exec();
+  const arrayAlumnosDB = await Boletin.find({ cursoid: req.body.idcur }, { _id: 0, ausentes: 1 }).populate('alumnoid').exec();
   const arrayAusentes = []
   for (var i = 0; i < arrayAlumnosDB.length; i++) {
     arrayAusentes[i] = {
@@ -70,12 +70,9 @@ async function getFilterAusentes(req, res) {
 }
 
 async function updateAttendance(req, res) {
-  const filter = { alumnoid: req.body.id}
+  const filter = { alumnoid: req.body.idalu }
   const update = req.body.update
-  //console.log(filter)
-  //console.log(update)
   const alumnosAusentesDB = await Boletin.findOneAndUpdate(filter, update);
-//console.log(alumnosAusentesDB)
   res.send(alumnosAusentesDB);
 }
 

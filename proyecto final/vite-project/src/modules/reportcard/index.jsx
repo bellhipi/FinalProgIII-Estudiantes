@@ -1,7 +1,7 @@
-import { useState, useContext, React } from 'react'
-//import listadoCursos from '../../data/cursos.json'
-//import listadoAlumnos from '../../data/alumnos.json';
-import { ApiContext } from '../../context/apiContext';
+import { useState,useEffect, React } from 'react'
+import curService from '../../service/curso';
+import aluService from '../../service/alumno';
+import boleService from '../../service/boletin';
 import { Select, Divider, Typography, Table, Space } from 'antd';
 import Spinner from '../../components/Spinner';
 const { Title } = Typography;
@@ -25,44 +25,32 @@ const columns = [
 
 const ReportCard = () => {
 
-    const { listadoCursos, getFiltrarAlumnos, alumnos, getFiltrarBoletin, boletin } = useContext(ApiContext);
+    const [alumnos, setAlumnos] = useState([])
+    const [listadoCursos, setListadoCursos] = useState(0)
+    const [boletin, setBoletin] = useState([])
 
-    const onChange = (value) => {
-        getFiltrarAlumnos(value)
-        
-        /* const auxcursos = listadoCursos.filter((c) => c.id === value)
-        setAlumnosCurso(listadoAlumnos.filter((a) => a.curso === value))
-        setMaterias(auxcursos[0].materias) */
-    };
-
-    const onChangeAlu = (value) => {
-        getFiltrarBoletin(value)
-       /*  const auxalumnos = listadoAlumnos.filter((a) => a.dni === value)
-        setAlumnos(auxalumnos)
-        crearData(auxalumnos[0].notas, materias) */
-    };
-
-    /* const crearData = (n, m) => {
-        let aux = [];
-        for (let i = 0; i < m.length; i++) {
-            aux[i] = {
-                key: `${i + 1}`,
-                materia: m[i],
-                nota: n[i]
-            }
+    useEffect(() => {
+        const NumCursos = async () => {
+            await curService.getNumCursos().then((response) => {
+                setListadoCursos(response.data)
+            });
         }
+        NumCursos()
+    }, [])
 
-        console.log('data', aux)
-        setData(aux)
+    const onChange = async (idalu) => {
+        const data = { idalu }
+        await aluService.getFiltrarAlumnos(data).then((response) => {
+            setAlumnos(response.data)
+        });
     };
- */
-    /* useEffect(() => {
-        const timer = setTimeout(() => {
-            console.log('Ejecutado despues de 5 segundos')
-            setAnios(listadoCursos)
-        }, 5000)
-        return () => clearTimeout(timer)
-    }, []); */
+
+    const onChangeAlu = async (idalu) => {
+        const data = { idalu }
+        await boleService.getFiltrarBoletin(data).then((response) => {
+            setBoletin(response.data)
+        });
+    };
 
     return (
         <>
@@ -70,7 +58,7 @@ const ReportCard = () => {
                 Boletín
             </Title>
 
-            {!listadoCursos? (
+            {!listadoCursos ? (
                 <>
                     <Spinner />
                 </>
