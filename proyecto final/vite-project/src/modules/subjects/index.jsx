@@ -31,7 +31,7 @@ const Subjects = () => {
     
     return (
         <>
-            <Title>
+            <Title level={3}>
                 Materias
             </Title>
 

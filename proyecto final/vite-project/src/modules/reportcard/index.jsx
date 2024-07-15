@@ -54,7 +54,7 @@ const ReportCard = () => {
 
     return (
         <>
-            <Title>
+            <Title level={3}>
                 Boletín
             </Title>
 

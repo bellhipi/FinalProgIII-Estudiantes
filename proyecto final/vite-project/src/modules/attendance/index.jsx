@@ -42,7 +42,7 @@ const Attendance = () => {
 
     return (
         <>
-            <Title>
+            <Title level={3}>
                 Asistencia
             </Title>
 
