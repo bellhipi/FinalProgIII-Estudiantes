@@ -1,6 +1,6 @@
-
 const Boletin = require("../schemas/boletin")
-
+const Curso = require("../schemas/curso")
+const Alumno = require("../schemas/alumno")
 
 /* async function getNombreMateria(req, res){
     const nombreMateria = await Materia.findById(req,{_id:0, nombre:1}).exec();
@@ -76,8 +76,30 @@ async function updateAttendance(req, res) {
   res.send(alumnosAusentesDB);
 }
 
+async function altaBoletin(req, res) {
+  const idAlumno = await Alumno.find({ dni: req.body.values.id }, '_id').populate('cursoid').exec();
+
+  const arrayNotas = []
+  for (var i = 0; i < idAlumno[0].cursoid.materias.length; i++) {
+    arrayNotas[i] = {
+      materiaid: idAlumno[0].cursoid.materias[i],
+      nota: 0,
+    }
+  }
+
+  const newBole = {
+    cursoid: idAlumno[0].cursoid._id,
+    ausentes: 0,
+    notas: arrayNotas,
+    alumnoid: idAlumno[0]._id,
+  };
+  
+  await new Boletin(newBole).save();
+}
+
 module.exports = {
   getFilterBoletin: getFilterBoletin,
   getFilterAusentes: getFilterAusentes,
-  updateAttendance: updateAttendance
+  updateAttendance: updateAttendance,
+  altaBoletin: altaBoletin
 };
