@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const cursoRouter = require('./routes/curso')
 const alumnoRouter = require('./routes/alumno')
 const boletinRouter = require('./routes/boletin')
+const docenteRouter = require('./routes/docente')
 const mongoDB = require('./configs/mongodb')
 
 
@@ -23,5 +24,6 @@ app.use(cors())
 app.use('/', cursoRouter);
 app.use('/', alumnoRouter);
 app.use('/', boletinRouter);
+app.use('/', docenteRouter);
 
 app.listen(PORT, () => console.log('Server escuchando en el puerto', PORT))  

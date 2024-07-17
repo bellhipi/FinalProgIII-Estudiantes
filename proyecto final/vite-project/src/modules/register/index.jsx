@@ -3,6 +3,7 @@ import { Typography, Button, DatePicker, Form, Input, InputNumber, Radio, Card, 
 import { Link } from 'react-router-dom';
 import aluService from '../../service/alumno';
 import boleService from '../../service/boletin';
+import docService from '../../service/docente';
 import Success from './success';
 const { Text } = Typography;
 const formItemLayout = {
@@ -43,8 +44,10 @@ const Register = () => {
           )
       })
     } else {
-      console.log('teacher')
-
+      await docService.altaDocente({ values }).then((response) => {
+        console.log('respuesta',response.data)
+        setRespuesta(response.data)
+      })
     }
   };
 
@@ -54,7 +57,7 @@ const Register = () => {
 
   return (
     <>
-      {respuesta == 'Alumno registrado exitosamente' ? (
+      {respuesta.includes('registrado exitosamente') ? (
         <Success />
       ) : (
         respuesta.includes('nombre de usuario') ? (
