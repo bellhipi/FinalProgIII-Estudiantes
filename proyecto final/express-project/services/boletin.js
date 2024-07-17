@@ -95,6 +95,9 @@ async function altaBoletin(req, res) {
   };
   
   await new Boletin(newBole).save();
+
+  console.log(newBole)
+  res.send(newBole);
 }
 
 module.exports = {
