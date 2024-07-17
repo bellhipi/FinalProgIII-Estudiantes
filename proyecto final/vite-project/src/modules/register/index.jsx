@@ -67,7 +67,7 @@ const Register = () => {
             subTitle={respuesta}
             extra={[
               <Button type="primary" key="console">
-                <Link to="/login"> Ligin </Link>
+                <Link to="/login"> Login </Link>
               </Button>,
               <Button key="buy" onClick={onClick}> Back to register </Button>,
             ]}

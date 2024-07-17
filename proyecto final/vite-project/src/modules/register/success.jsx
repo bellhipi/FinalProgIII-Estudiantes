@@ -9,7 +9,7 @@ const Success = () => (
     subTitle="Para continuar inicie sesión con su usuario y contraseña."
     extra={[
       <Button type="primary" htmlType="submit" key="console">
-        <Link to="/login"> Ligin </Link>
+        <Link to="/login"> Login </Link>
       </Button>,
     ]}
   />
