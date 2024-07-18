@@ -31,6 +31,22 @@ async function altaDocente(req, res) {
   res.send(respuesta)
 }
 
+async function loginDocente(req, res) {
+  const existeUser = await Docente.find({ user: req.body.values.username.trim() }, 'password').exec();
+  let respuesta = ''
+  if (existeUser.length != 0) {
+    if (existeUser[0].password == req.body.values.password.trim()) {
+      respuesta = 'Ingresar'
+    } else {
+      respuesta = 'Contraseña incorrecta!'
+    }
+  } else {
+    respuesta = 'Usuario no registrado!'
+  }
+  res.send(respuesta)
+}
+
 module.exports = {
-  altaDocente: altaDocente
+  altaDocente: altaDocente,
+  loginDocente: loginDocente
 };

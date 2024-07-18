@@ -57,8 +57,24 @@ async function altaAlumno(req, res) {
   res.send(respuesta)
 }
 
+async function loginAlumno(req, res) {
+  const existeUser = await Alumno.find({ user: req.body.values.username.trim() }, 'password').exec();
+  let respuesta = ''
+  if (existeUser.length != 0) {
+    if (existeUser[0].password == req.body.values.password.trim()) {
+      respuesta = 'Ingresar'
+    } else {
+      respuesta = 'Contraseña incorrecta!'
+    }
+  } else {
+    respuesta = 'Usuario no registrado!'
+  }
+  res.send(respuesta)
+}
+
 module.exports = {
   getFilterAlumnos: getFilterAlumnos,
   getAlumnos: getAlumnos,
-  altaAlumno: altaAlumno
+  altaAlumno: altaAlumno,
+  loginAlumno: loginAlumno
 };

@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { Typography, Button, DatePicker, Form, Input, InputNumber, Radio, Card, Result } from 'antd';
+import { Button, DatePicker, Form, Input, InputNumber, Radio, Card, Result } from 'antd';
 import { Link } from 'react-router-dom';
 import aluService from '../../service/alumno';
 import boleService from '../../service/boletin';
 import docService from '../../service/docente';
 import Success from './success';
-const { Text } = Typography;
 const formItemLayout = {
   labelCol: {
     xs: { span: 24 },
@@ -45,7 +44,7 @@ const Register = () => {
       })
     } else {
       await docService.altaDocente({ values }).then((response) => {
-        console.log('respuesta',response.data)
+        console.log('respuesta', response.data)
         setRespuesta(response.data)
       })
     }
@@ -94,7 +93,7 @@ const Register = () => {
                 onFinishFailed={onFinishFailed}
               >
                 <Form.Item
-                  label="Radio"
+                  label="Account Type"
                   name="radio"
                   rules={[
                     {
