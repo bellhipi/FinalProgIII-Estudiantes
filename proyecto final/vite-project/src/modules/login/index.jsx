@@ -7,7 +7,7 @@ import docService from '../../service/docente';
 import Home from '../home';
 
 const Login = () => {
-  const { setIsUserLogged } = useContext(ApiContext);
+  const { setIsUserLogged, setUserLogged } = useContext(ApiContext);
   const [value, setValue] = useState(1);
   const [respuesta, setRespuesta] = useState('');
 
@@ -18,16 +18,15 @@ const Login = () => {
   const onFinish = async (values) => {
     if (values.radio) {
       await aluService.loginAlumno({ values }).then((response) => {
-        console.log('respuesta', response.data)
         setRespuesta(response.data)
         setIsUserLogged('alu')
-
+        setUserLogged(response.data)
       })
     } else {
       await docService.loginDocente({ values }).then((response) => {
-        console.log('respuesta', response.data)
         setRespuesta(response.data)
         setIsUserLogged('doc')
+        setUserLogged(response.data)
       })
     }
   };

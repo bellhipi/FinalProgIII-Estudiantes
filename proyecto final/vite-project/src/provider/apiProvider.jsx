@@ -2,18 +2,20 @@ import { React, useState, useEffect } from 'react'
 import { ApiContext } from "../context/apiContext"
 
 export const ApiProvider = ({ children }) => {
-    const [isUserLogged, setIsUserLogged] = useState('');
-    const [userLogged, setUserLogged] = useState('');
+    const [isUserLogged, setIsUserLogged] = useState(0);
+    const [userLogged, setUserLogged] = useState(0);
 
   
     useEffect(() => {
       /* if (userLogged !== undefined) {
         setIsUserLogged(true);
       } */
-      if (isUserLogged != ''){
-        console.log(isUserLogged)
+      if (isUserLogged){
+        console.log('tipo de log',isUserLogged)
+        console.log('id', userLogged)
       }else{
-        console.log(isUserLogged)
+        console.log('tipo de log', isUserLogged)
+        console.log('id', userLogged)
       }
     }, [isUserLogged]);
 

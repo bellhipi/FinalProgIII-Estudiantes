@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 
 const Logout = () => {
 
-    const { setIsUserLogged } = useContext(ApiContext);
+    const { setIsUserLogged, setUserLogged } = useContext(ApiContext);
 
     const onClick = () => {
-        console.log(console.log('logout'));
-        setIsUserLogged('')
+        setIsUserLogged(0)
+        setUserLogged(0)
       };
 
   return (

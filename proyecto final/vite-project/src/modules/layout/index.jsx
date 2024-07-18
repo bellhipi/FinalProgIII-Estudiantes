@@ -3,12 +3,10 @@ import { Breadcrumb, Layout, Menu, theme, Image, Divider, Col, Row } from 'antd'
 import { Outlet, Link } from 'react-router-dom';
 import {
     HomeOutlined,
-    LoginOutlined,
     LogoutOutlined,
     ScheduleOutlined,
     ProfileOutlined,
-    ReadOutlined,
-    UserOutlined
+    ReadOutlined
 } from '@ant-design/icons'
 import { ApiContext } from '../../context/apiContext';
 
@@ -42,7 +40,7 @@ const App = () => {
         <Layout>
 
             <div className="demo-logo" />
-            {isUserLogged == '' ? (
+            {!isUserLogged? (
                 <></>
             ) : (
                 <Header

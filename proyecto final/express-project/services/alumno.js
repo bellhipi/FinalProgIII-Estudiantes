@@ -1,6 +1,11 @@
 const Alumno = require("../schemas/alumno")
 const Curso = require("../schemas/curso")
 
+async function getAlumno(req, res) {
+  const alumnoDB = await Alumno.findById(req.params.id);
+  res.send(alumnoDB);
+}
+
 async function getFilterAlumnos(req, res) {
   const arrayAlumnosDB = await Alumno.find({ cursoid: req.body.idalu }, { nombre: 1 }).exec();
   const arrayAlumnosOrdenados = arrayAlumnosDB.sort((a, b) => {
@@ -17,11 +22,6 @@ async function getFilterAlumnos(req, res) {
   });
 
   res.send(arrayAlumnosOrdenados);
-}
-
-async function getAlumnos(req, res) {
-  const arrayAlumnosDB = await Alumno.find({});
-  res.send(arrayAlumnosDB);
 }
 
 async function altaAlumno(req, res) {
@@ -73,8 +73,8 @@ async function loginAlumno(req, res) {
 }
 
 module.exports = {
+  getAlumno: getAlumno,
   getFilterAlumnos: getFilterAlumnos,
-  getAlumnos: getAlumnos,
   altaAlumno: altaAlumno,
   loginAlumno: loginAlumno
 };
