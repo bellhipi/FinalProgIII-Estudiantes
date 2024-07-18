@@ -5,6 +5,7 @@ import Attendance from './modules/attendance'
 import Subjects from './modules/subjects'
 import ReportCard from './modules/reportcard'
 import Login from './modules/login'
+import Logout from './modules/logout'
 import Register from './modules/register'
 import NotFound from './modules/notfound'
 
@@ -19,6 +20,7 @@ function App() {
             <Route path="subjects" element={<Subjects />} />
             <Route path="reportcard" element={<ReportCard />} />
             <Route path="login" element={<Login />} />
+            <Route path="logout" element={<Logout />} />
             <Route path="register" element={<Register />} />
             <Route path="*" element={<NotFound />} />
           </Route>

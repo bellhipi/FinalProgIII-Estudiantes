@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Breadcrumb, Layout, Menu, theme, Image, Divider, Col, Row } from 'antd';
 import { Outlet, Link } from 'react-router-dom';
 import {
@@ -9,64 +9,62 @@ import {
     ProfileOutlined,
     ReadOutlined,
     UserOutlined
-  } from '@ant-design/icons'
+} from '@ant-design/icons'
+import { ApiContext } from '../../context/apiContext';
 
-  
 const { Header, Content, Footer } = Layout;
 
 function getItem(label, key, icon) {
     return {
-      key,
-      icon,
-      label,
+        key,
+        icon,
+        label,
     }
-  }
-  
-  const items = [
+}
+
+const items = [
     getItem(<Link to="/"> Home </Link>, '1', <HomeOutlined />),
     getItem(<Link to="/attendance"> Attendance </Link>, '2', <ScheduleOutlined />),
     getItem(<Link to="/reportcard"> Report Card </Link>, '3', <ProfileOutlined />),
     getItem(<Link to="/subjects"> Subjects </Link>, '4', <ReadOutlined />),
-    getItem(<Link to="/register">  Register </Link>, '5', <UserOutlined />),
-    getItem(<Link to="/login"> Login </Link>, '6', <LoginOutlined />),
-    getItem(<Link to="/*"> Logout </Link>, '7', <LogoutOutlined />),
-  ];
-
-const onFinish = (values) => {
-    console.log('Success:', values);
-};
-const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
-};
+    getItem(<Link to="/logout"> Logout </Link>, '5', <LogoutOutlined />),
+];
 
 
 const App = () => {
     const {
         token: { colorBgContainer, borderRadiusLG },
     } = theme.useToken();
+
+    const { isUserLogged } = useContext(ApiContext);
+
     return (
         <Layout>
 
-            <Header
-                style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                }}
-            >
-                <div className="demo-logo" />
-
-                <Menu
-                    theme="dark"
-                    mode="horizontal"
-                    defaultSelectedKeys={['1']}
-                    items={items}
+            <div className="demo-logo" />
+            {isUserLogged == '' ? (
+                <></>
+            ) : (
+                <Header
                     style={{
-                        flex: 1,
-                        minWidth: 0,
+                        display: 'flex',
+                        alignItems: 'center',
                     }}
-                />
+                >
+                    <Menu
+                        theme="dark"
+                        mode="horizontal"
+                        defaultSelectedKeys={['1']}
+                        items={items}
+                        style={{
+                            flex: 1,
+                            minWidth: 0,
+                        }}
+                    />
+                </Header>
+            )}
 
-            </Header>
+
 
             <Content
                 style={{
@@ -78,7 +76,7 @@ const App = () => {
                         margin: '25px 0',
                     }}
                 >
-                    
+
                 </Breadcrumb>
                 <div
                     style={{

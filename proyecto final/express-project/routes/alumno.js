@@ -7,4 +7,5 @@ router.get("/alumnos", services.getAlumnos)
 router.post("/alumnosalta", services.altaAlumno)
 router.post("/alumnoslog", services.loginAlumno)
 
+
 module.exports = router

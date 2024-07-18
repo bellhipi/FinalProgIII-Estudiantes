@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Card, Button, Form, Input, Radio, Alert } from 'antd';
 import { Link } from 'react-router-dom';
+import { ApiContext } from '../../context/apiContext';
 import aluService from '../../service/alumno';
 import docService from '../../service/docente';
-import Success from '../register/success';
+import Home from '../home';
 
 const Login = () => {
+  const { setIsUserLogged } = useContext(ApiContext);
   const [value, setValue] = useState(1);
   const [respuesta, setRespuesta] = useState('');
 
@@ -18,11 +20,14 @@ const Login = () => {
       await aluService.loginAlumno({ values }).then((response) => {
         console.log('respuesta', response.data)
         setRespuesta(response.data)
+        setIsUserLogged('alu')
+
       })
     } else {
       await docService.loginDocente({ values }).then((response) => {
         console.log('respuesta', response.data)
         setRespuesta(response.data)
+        setIsUserLogged('doc')
       })
     }
   };
@@ -33,8 +38,8 @@ const Login = () => {
 
   return (
     <>
-      {respuesta.includes('Ingresar') ? (
-        <Success />
+      {(respuesta != 'Contraseña incorrecta!' && respuesta != 'Usuario no registrado!' && respuesta != '') ? (
+        <Home />
       ) : (
         <div align="center">
           <Card

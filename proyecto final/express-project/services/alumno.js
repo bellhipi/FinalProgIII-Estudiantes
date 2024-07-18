@@ -62,7 +62,7 @@ async function loginAlumno(req, res) {
   let respuesta = ''
   if (existeUser.length != 0) {
     if (existeUser[0].password == req.body.values.password.trim()) {
-      respuesta = 'Ingresar'
+      respuesta = existeUser[0]._id
     } else {
       respuesta = 'Contraseña incorrecta!'
     }
