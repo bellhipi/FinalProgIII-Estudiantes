@@ -23,8 +23,7 @@ const Subjects = () => {
     }, [])
 
     const onChange = async (idcur) => {
-        const data = { idcur }
-        await curService.getFiltrarMateria(data).then((response) => {
+        await curService.getFiltrarMateria(idcur).then((response) => {
             setMaterias(response.data)
         })
     };

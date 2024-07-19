@@ -24,8 +24,7 @@ const Attendance = () => {
     }, [])
 
     const onChange = async (idcur) => {
-        const data = { idcur }
-        await boleService.getFiltrarAusentes(data).then((response) => {
+        await boleService.getFiltrarAusentes(idcur).then((response) => {
             setAlumnos(response.data)
         });
     };
@@ -35,7 +34,7 @@ const Attendance = () => {
         const data = { idalu, update }
         await boleService.updateAttendance(data).then((response) => {
         });
-        boleService.getFiltrarAusentes({idcur}).then((response) => {
+        boleService.getFiltrarAusentes(idcur).then((response) => {
             setAlumnos(response.data)
         }); 
     };

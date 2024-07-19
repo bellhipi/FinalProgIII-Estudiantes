@@ -39,15 +39,13 @@ const ReportCard = () => {
     }, [])
 
     const onChange = async (idalu) => {
-        const data = { idalu }
-        await aluService.getFiltrarAlumnos(data).then((response) => {
+        await aluService.getFiltrarAlumnos(idalu).then((response) => {
             setAlumnos(response.data)
         });
     };
 
     const onChangeAlu = async (idalu) => {
-        const data = { idalu }
-        await boleService.getFiltrarBoletin(data).then((response) => {
+        await boleService.getFiltrarBoletin(idalu).then((response) => {
             setBoletin(response.data)
         });
     };

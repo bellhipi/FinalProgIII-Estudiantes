@@ -4,6 +4,6 @@ const services = require("../services/curso")
 
 //router.get("/cursos", services.getCursos)
 router.get("/cursosnum", services.getNum)
-router.post("/cursosmat", services.getFilterMateria)
+router.get('/cursosmat/:id', services.getFilterMateria)
 
 module.exports = router

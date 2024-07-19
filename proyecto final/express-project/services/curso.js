@@ -14,7 +14,7 @@ async function getNum(req, res) {
 
 async function getFilterMateria(req, res) {
     //const arrayMateriasDB = await Curso.find({id: req.body.id},{_id:0, materias:1}).exec();
-    const arrayMateriasDB = await Curso.find({ id: req.body.idcur }, { _id: 0, materias: 1 }).populate('materias').exec();
+    const arrayMateriasDB = await Curso.find({ id: req.params.id }, { _id: 0, materias: 1 }).populate('materias').exec();
     const arrayMaterias = arrayMateriasDB[0].materias
     const arrayNombresDB = []
     for (var i = 0; i < arrayMaterias.length; i++) {

@@ -7,7 +7,7 @@ async function getAlumno(req, res) {
 }
 
 async function getFilterAlumnos(req, res) {
-  const arrayAlumnosDB = await Alumno.find({ cursoid: req.body.idalu }, { nombre: 1 }).exec();
+  const arrayAlumnosDB = await Alumno.find({ cursoid: req.params.id }, { nombre: 1 }).exec();
   const arrayAlumnosOrdenados = arrayAlumnosDB.sort((a, b) => {
     const nameA = a.nombre.toUpperCase(); // ignore upper and lowercase
     const nameB = b.nombre.toUpperCase(); // ignore upper and lowercase

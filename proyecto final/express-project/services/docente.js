@@ -1,5 +1,10 @@
 const Docente = require("../schemas/docente")
 
+async function getDocente(req, res) {
+  const docenteDB = await Docente.findById(req.params.id);
+  res.send(docenteDB);
+}
+
 async function altaDocente(req, res) {
   const existeUser = await Docente.find({ user: req.body.values.user }).exec();
   let respuesta = ''
@@ -47,6 +52,7 @@ async function loginDocente(req, res) {
 }
 
 module.exports = {
+  getDocente: getDocente,
   altaDocente: altaDocente,
   loginDocente: loginDocente
 };

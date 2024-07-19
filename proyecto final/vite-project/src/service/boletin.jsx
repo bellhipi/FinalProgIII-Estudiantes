@@ -2,8 +2,8 @@ import api from '../service/api'
 
 const boleService = {}
 
-boleService.getFiltrarBoletin = (data) => api.post('/boletin', data)
-boleService.getFiltrarAusentes = (data) => api.post('/boletinaus', data)
+boleService.getFiltrarBoletin = (idalu) => api.get(`/boletin/${idalu}`)
+boleService.getFiltrarAusentes = (idcur) => api.get(`/boletinaus/${idcur}`)
 boleService.updateAttendance = (data) => api.post('/attendance', data)
 boleService.altaBoletin = (values) => api.post('/boletinalta', values)
 
