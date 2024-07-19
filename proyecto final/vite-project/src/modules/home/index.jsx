@@ -13,10 +13,9 @@ const Home = () => {
   const [datos, setDatos] = useState(0)
 
   useEffect(() => {
-    const getAlumno = async () => {
+    const getUser = async () => {
       if (isUserLogged == 'alu') {
         await aluService.getAlumno(userLogged).then((response) => {
-          console.log(response.data)
           setDatos(response.data)
         });
       } else {
@@ -27,7 +26,7 @@ const Home = () => {
         }
       }
     }
-    getAlumno()
+    getUser()
   }, [])
 
 

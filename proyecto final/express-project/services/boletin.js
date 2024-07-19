@@ -1,5 +1,4 @@
 const Boletin = require("../schemas/boletin")
-const Curso = require("../schemas/curso")
 const Alumno = require("../schemas/alumno")
 
 /* async function getNombreMateria(req, res){

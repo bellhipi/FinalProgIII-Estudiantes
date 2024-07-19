@@ -7,9 +7,6 @@ export const ApiProvider = ({ children }) => {
 
   
     useEffect(() => {
-      /* if (userLogged !== undefined) {
-        setIsUserLogged(true);
-      } */
       if (isUserLogged){
         console.log('tipo de log',isUserLogged)
         console.log('id', userLogged)

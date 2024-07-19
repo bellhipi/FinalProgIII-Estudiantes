@@ -1,7 +1,9 @@
-import { useEffect, useState, React } from 'react'
+import { useEffect, useState, useContext, React } from 'react'
 import curService from '../../service/curso';
 import { Select, Divider, List, Typography } from 'antd';
 import Spinner from '../../components/Spinner';
+import { ApiContext } from '../../context/apiContext';
+import aluService from '../../service/alumno';
 
 const { Title } = Typography;
 // Filter `option.label` match the user type `input`
@@ -10,24 +12,37 @@ const filterOption = (input, option) =>
 
 const Subjects = () => {
 
+    const { isUserLogged, userLogged } = useContext(ApiContext);
     const [listadoCursos, setListadoCursos] = useState(0)
     const [materias, setMaterias] = useState([])
 
     useEffect(() => {
-        const NumCursos = async () => {
-            await curService.getNumCursos().then((response) => {
-                setListadoCursos(response.data)
-            });
+        const getCrusos = async () => {
+            if (isUserLogged == 'alu') {
+                await aluService.getCursoAlumno(userLogged).then((response) => {
+                    const idcur = response.data.id
+                     curService.getFiltrarMateria(idcur).then((response) => {
+                        setMaterias(response.data)
+                    }); 
+                });
+            } else {
+                if (isUserLogged == 'doc') {
+                    await curService.getNumCursos().then((response) => {
+                        setListadoCursos(response.data)
+                    });
+                }
+            }
         }
-        NumCursos()
+        getCrusos()
     }, [])
 
     const onChange = async (idcur) => {
+        console.log(idcur)
         await curService.getFiltrarMateria(idcur).then((response) => {
             setMaterias(response.data)
         })
     };
-    
+
     return (
         <>
             <Title level={3}>
@@ -35,8 +50,11 @@ const Subjects = () => {
             </Title>
 
             {!listadoCursos ? (
-                <>
-                    <Spinner />
+                <> {materias.length == 0 ? (
+                    <>
+                        <Spinner />
+                    </>
+                ) : (<></>)}
                 </>
             ) : (
                 <>

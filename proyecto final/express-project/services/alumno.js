@@ -6,6 +6,11 @@ async function getAlumno(req, res) {
   res.send(alumnoDB);
 }
 
+async function getCursoAlumno(req, res) {
+  const alumnoDB = await Alumno.findById(req.params.id, { _id:0, cursoid:1 }).populate('cursoid').exec();
+  res.send(alumnoDB.cursoid);
+}
+
 async function getFilterAlumnos(req, res) {
   const arrayAlumnosDB = await Alumno.find({ cursoid: req.params.id }, { nombre: 1 }).exec();
   const arrayAlumnosOrdenados = arrayAlumnosDB.sort((a, b) => {
@@ -74,6 +79,7 @@ async function loginAlumno(req, res) {
 
 module.exports = {
   getAlumno: getAlumno,
+  getCursoAlumno: getCursoAlumno,
   getFilterAlumnos: getFilterAlumnos,
   altaAlumno: altaAlumno,
   loginAlumno: loginAlumno

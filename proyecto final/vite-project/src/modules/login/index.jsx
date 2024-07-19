@@ -19,14 +19,24 @@ const Login = () => {
     if (values.radio) {
       await aluService.loginAlumno({ values }).then((response) => {
         setRespuesta(response.data)
-        setIsUserLogged('alu')
-        setUserLogged(response.data)
+        if (response.data != 'Contraseña incorrecta!' && response.data != 'Usuario no registrado!') {
+          setIsUserLogged('alu')
+          setUserLogged(response.data)
+        } else {
+          setIsUserLogged(0)
+          setUserLogged(0)
+        }
       })
     } else {
       await docService.loginDocente({ values }).then((response) => {
         setRespuesta(response.data)
-        setIsUserLogged('doc')
-        setUserLogged(response.data)
+        if (response.data != 'Contraseña incorrecta!' && response.data != 'Usuario no registrado!') {
+          setIsUserLogged('doc')
+          setUserLogged(response.data)
+        } else {
+          setIsUserLogged(0)
+          setUserLogged(0)
+        }
       })
     }
   };
