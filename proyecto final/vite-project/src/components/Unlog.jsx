@@ -17,14 +17,18 @@ const Unlog = () => {
             backgroundColor: '#F2F3F4'
           }}
         >
-          <Button type="primary" size="large" icon={<LoginOutlined />}>
-            <Link to="/login"> Iniciar Sesión </Link>
-          </Button>
+          <Link to="/login">
+            <Button type="primary" size="large" icon={<LoginOutlined />}>
+              Iniciar Sesión
+            </Button>
+          </Link>
           <br></br>
           <br></br>
-          <Button size="large" icon={<UserOutlined />}>
-            <Link to="/register">  Registrarse </Link>
-          </Button>
+          <Link to="/register">
+            <Button size="large" icon={<UserOutlined />}>
+              Registrarse
+            </Button>
+          </Link>
         </Card>
       </div>
     </>

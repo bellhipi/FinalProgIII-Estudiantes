@@ -37,8 +37,22 @@ async function getFilterBoletin(req, res) {
   res.send(arrayNotasOrdenadas);
 }
 
+async function getFilterAlumnoAusente(req, res) {
+  const arrayAlumnoDB = await Boletin.find({ alumnoid: req.params.id }, { _id: 0, ausentes: 1 }).populate('alumnoid').exec();
+  const arrayAusente = []
+    arrayAusente[0] = {
+      _id: arrayAlumnoDB[0].alumnoid._id,
+      nombre: arrayAlumnoDB[0].alumnoid.nombre,
+      dni: arrayAlumnoDB[0].alumnoid.dni,
+      curso: arrayAlumnoDB[0].alumnoid.cursoid,
+      ausentes: arrayAlumnoDB[0].ausentes
+    }
+    res.send(arrayAusente);
+  }
+
+
 async function getFilterAusentes(req, res) {
-  //  const arrayAlumnosDB = await Boletin.find({cursoid: req.body.id},{_id:0, ausentes:1}).populate('alumnoid').exec();
+  //const arrayAlumnosDB = await Boletin.find({cursoid: req.body.id},{_id:0, ausentes:1}).populate('alumnoid').exec();
   //const arrayAlumnosDB = await Boletin.find({ cursoid: req.body.id }, { _id: 0, ausentes: 1 }).populate('alumnoid').populate({ path: 'cursoid', select: 'id' }).exec();
   const arrayAlumnosDB = await Boletin.find({ cursoid: req.params.id }, { _id: 0, ausentes: 1 }).populate('alumnoid').exec();
   const arrayAusentes = []
@@ -94,13 +108,12 @@ async function altaBoletin(req, res) {
   };
   
   await new Boletin(newBole).save();
-
-  console.log(newBole)
   res.send(newBole);
 }
 
 module.exports = {
   getFilterBoletin: getFilterBoletin,
+  getFilterAlumnoAusente: getFilterAlumnoAusente,
   getFilterAusentes: getFilterAusentes,
   updateAttendance: updateAttendance,
   altaBoletin: altaBoletin

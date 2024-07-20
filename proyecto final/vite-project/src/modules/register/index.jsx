@@ -34,7 +34,6 @@ const Register = () => {
       await aluService.altaAlumno({ values }).then((response) => {
         setRespuesta(response.data),
           response.data == 'Alumno registrado exitosamente' ? (
-            console.log('antes de boletin', response.data),
             boleService.altaBoletin({ values }).then((response) => {
               console.log('boletin creado')
             })
@@ -65,9 +64,11 @@ const Register = () => {
             title="Usuario existente"
             subTitle={respuesta}
             extra={[
-              <Button type="primary" key="console">
-                <Link to="/login"> Login </Link>
-              </Button>,
+              <Link to="/login">
+                <Button type="primary" key="console">
+                  Login
+                </Button>
+              </Link>,
               <Button key="buy" onClick={onClick}> Back to register </Button>,
             ]}
           />

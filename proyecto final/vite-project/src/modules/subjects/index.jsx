@@ -20,7 +20,7 @@ const Subjects = () => {
         const getCrusos = async () => {
             if (isUserLogged == 'alu') {
                 await aluService.getCursoAlumno(userLogged).then((response) => {
-                    const idcur = response.data.id
+                    const idcur = response.data._id
                      curService.getFiltrarMateria(idcur).then((response) => {
                         setMaterias(response.data)
                     }); 
@@ -37,7 +37,6 @@ const Subjects = () => {
     }, [])
 
     const onChange = async (idcur) => {
-        console.log(idcur)
         await curService.getFiltrarMateria(idcur).then((response) => {
             setMaterias(response.data)
         })
@@ -67,7 +66,7 @@ const Subjects = () => {
                             filterOption={filterOption}
                             options={listadoCursos.map((a) => ({
                                 label: `${a.id}° Año`,
-                                value: a.id,
+                                value: a._id,
                             }))}
                         />
                     </Divider>

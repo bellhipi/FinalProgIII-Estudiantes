@@ -58,7 +58,6 @@ async function altaAlumno(req, res) {
       respuesta = 'Alumno registrado exitosamente'
     }
   }
-  console.log(respuesta)
   res.send(respuesta)
 }
 

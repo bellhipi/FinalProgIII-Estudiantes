@@ -32,7 +32,6 @@ async function altaDocente(req, res) {
       respuesta = 'Docente registrado exitosamente'
     }
   }
-  console.log(respuesta)
   res.send(respuesta)
 }
 
