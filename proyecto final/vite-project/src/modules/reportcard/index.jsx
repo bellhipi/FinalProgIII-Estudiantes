@@ -1,9 +1,10 @@
-import { useState,useEffect, React } from 'react'
+import { useState, useEffect, useContext, React } from 'react'
 import curService from '../../service/curso';
 import aluService from '../../service/alumno';
 import boleService from '../../service/boletin';
 import { Select, Divider, Typography, Table, Space } from 'antd';
 import Spinner from '../../components/Spinner';
+import { ApiContext } from '../../context/apiContext';
 const { Title } = Typography;
 
 // Filter `option.label` match the user type `input`
@@ -25,17 +26,27 @@ const columns = [
 
 const ReportCard = () => {
 
+    const { isUserLogged, userLogged } = useContext(ApiContext);
     const [alumnos, setAlumnos] = useState([])
     const [listadoCursos, setListadoCursos] = useState(0)
     const [boletin, setBoletin] = useState([])
 
     useEffect(() => {
-        const NumCursos = async () => {
-            await curService.getNumCursos().then((response) => {
-                setListadoCursos(response.data)
-            });
+        const getCrusos = async () => {
+            if (isUserLogged == 'alu') {
+                const idalu = userLogged
+                await boleService.getFiltrarBoletin(idalu).then((response) => {
+                    setBoletin(response.data)
+                });
+            } else {
+                if (isUserLogged == 'doc') {
+                    await curService.getNumCursos().then((response) => {
+                        setListadoCursos(response.data)
+                    });
+                }
+            }
         }
-        NumCursos()
+        getCrusos()
     }, [])
 
     const onChange = async (idalu) => {
@@ -58,7 +69,14 @@ const ReportCard = () => {
 
             {!listadoCursos ? (
                 <>
-                    <Spinner />
+                    {boletin.length == 0 ? (
+                        <>
+                            <Spinner />
+                        </>
+                    ) : (
+                        <>
+                            <Table dataSource={boletin} columns={columns} />
+                        </>)}
                 </>
             ) : (
                 <>

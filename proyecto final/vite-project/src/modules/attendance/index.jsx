@@ -20,7 +20,6 @@ const Attendance = () => {
         const getCrusos = async () => {
             if (isUserLogged == 'alu') {
                 boleService.getFiltrarAlumnoAusente(userLogged).then((response) => {
-                    console.log(response.data)
                     setAlumnos(response.data)
                 });
             } else {
@@ -57,11 +56,12 @@ const Attendance = () => {
             </Title>
 
             {!listadoCursos ? (
-                <> {alumnos.length == 0 ? (
-                    <>
-                        <Spinner />
-                    </>
-                ) : (<></>)}
+                <>
+                    {alumnos.length == 0 ? (
+                        <>
+                            <Spinner />
+                        </>
+                    ) : (<></>)}
                 </>
             ) : (
                 <>

@@ -21,9 +21,9 @@ const Subjects = () => {
             if (isUserLogged == 'alu') {
                 await aluService.getCursoAlumno(userLogged).then((response) => {
                     const idcur = response.data._id
-                     curService.getFiltrarMateria(idcur).then((response) => {
+                    curService.getFiltrarMateria(idcur).then((response) => {
                         setMaterias(response.data)
-                    }); 
+                    });
                 });
             } else {
                 if (isUserLogged == 'doc') {
@@ -49,11 +49,12 @@ const Subjects = () => {
             </Title>
 
             {!listadoCursos ? (
-                <> {materias.length == 0 ? (
-                    <>
-                        <Spinner />
-                    </>
-                ) : (<></>)}
+                <>
+                    {materias.length == 0 ? (
+                        <>
+                            <Spinner />
+                        </>
+                    ) : (<></>)}
                 </>
             ) : (
                 <>
