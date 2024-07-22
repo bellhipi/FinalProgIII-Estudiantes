@@ -4,9 +4,7 @@ import App from './App.jsx'
 import { ApiProvider } from './provider/apiProvider'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
     <ApiProvider>
       <App />
     </ApiProvider>
-  </React.StrictMode>,
 )
