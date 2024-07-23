@@ -24,21 +24,23 @@ Cómo ejecutarlo:
 
 ![image](https://github.com/user-attachments/assets/2f1128c0-c890-4bee-918b-6d4c44541b8a)
 
-![image](https://github.com/user-attachments/assets/030cee58-5295-4547-8ed9-34b9252548a2)
+![image](https://github.com/user-attachments/assets/81e605d0-b877-4a38-acd9-9c10cf3c3776)
 
-![image](https://github.com/user-attachments/assets/e158a446-8dca-40d6-9b81-d8d215d65525)
+![image](https://github.com/user-attachments/assets/8d61ad6c-d5be-4f24-8b91-d59e390db3db)
+
+![image](https://github.com/user-attachments/assets/7cd38f2c-6e3e-4115-bfd1-b4116f461585)
 
 - En una de las terminales posicionarse en la carpeta del back que es express-project con el comando cd
 
-![image](https://github.com/user-attachments/assets/00bd9f30-2b98-42a3-9b66-cc6b61f28f78)
+![image](https://github.com/user-attachments/assets/4b0156d3-9cd8-40a7-b591-4cd507ce8c32)
 
-![image](https://github.com/user-attachments/assets/277186d8-95c5-4e9f-b903-1e9a783e5659)
+![image](https://github.com/user-attachments/assets/aca7e245-184e-456b-95e2-e306af1497c6)
 
 - De igual manera en la otra terminal posicionarse sobre la carpeta del front que es vite-project
 
-![image](https://github.com/user-attachments/assets/88b23592-8705-4128-8703-b003c8e87979)
+![image](https://github.com/user-attachments/assets/cc4a6536-f58d-43d3-836b-19d134a7fc65)
 
-![image](https://github.com/user-attachments/assets/6fdd6bb7-2af2-43d3-a768-6e90b679d976)
+![image](https://github.com/user-attachments/assets/b1a48f0e-ec70-44e8-b6a5-909fc06ae09d)
 
 ![image](https://github.com/user-attachments/assets/98107485-186b-4f2f-af35-10b2b9b471f8)
 
