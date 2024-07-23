@@ -30,41 +30,41 @@ Cómo ejecutarlo:
 
 - En una de las terminales posicionarse en la carpeta del back que es express-project con el comando cd
 
-![image](https://github.com/user-attachments/assets/4b0156d3-9cd8-40a7-b591-4cd507ce8c32)
+![image](https://github.com/user-attachments/assets/1205dfee-0964-428c-a16c-89643fbe8132)
 
-![image](https://github.com/user-attachments/assets/aca7e245-184e-456b-95e2-e306af1497c6)
+![image](https://github.com/user-attachments/assets/e1118d1a-46b4-40f1-9f17-db1eac0f4ee5)
 
 - De igual manera en la otra terminal posicionarse sobre la carpeta del front que es vite-project
 
-![image](https://github.com/user-attachments/assets/cc4a6536-f58d-43d3-836b-19d134a7fc65)
+![image](https://github.com/user-attachments/assets/18ec7d80-b12e-47cb-9dd6-6535f17cab60)
 
-![image](https://github.com/user-attachments/assets/b1a48f0e-ec70-44e8-b6a5-909fc06ae09d)
+![image](https://github.com/user-attachments/assets/383cfcbf-be23-4b6a-8ce4-4aff14782216)
 
-![image](https://github.com/user-attachments/assets/98107485-186b-4f2f-af35-10b2b9b471f8)
+![image](https://github.com/user-attachments/assets/641ef30d-5138-4193-bfda-fc9f0f073147)
 
 - Asegurarse de instalar en ambas consolas todas las dependencias que falten con el comando npm i
 
-![image](https://github.com/user-attachments/assets/8607fd09-e7a2-4a44-aad3-54d211283a9e)
+![image](https://github.com/user-attachments/assets/c94b926e-247f-462f-bccf-6d5a4f3011e3)
 
-![image](https://github.com/user-attachments/assets/0e605cc0-44d9-4e21-9017-a986c670ed80)
+![image](https://github.com/user-attachments/assets/1f925127-9736-4e9b-9e05-cc9874437fc6)
 
-![image](https://github.com/user-attachments/assets/4c4d8789-b9f1-4eb4-80bb-ffc86a194672)
+![image](https://github.com/user-attachments/assets/53cb080e-4708-4dfc-be70-76f266bb653c)
 
-![image](https://github.com/user-attachments/assets/2254b157-85d5-41f7-9a18-48ebafb5532e)
+![image](https://github.com/user-attachments/assets/1f3952cc-7233-488a-81b2-984c8c207d0a)
 
 - Ejectuar en ambas consolas, tanto el back como el front con el comando npm run dev
 
-![image](https://github.com/user-attachments/assets/60bdfb2e-1bf6-42f9-886f-d85d256d5e00)
+![image](https://github.com/user-attachments/assets/5b8f6f4e-e0a5-41f4-803d-44c5304191e5)
 
-![image](https://github.com/user-attachments/assets/ff8bb420-74b2-43bd-8b8d-81435f2006d7)
+![image](https://github.com/user-attachments/assets/cb3bfa48-5341-46c7-b83d-fcbd1174d993)
 
-![image](https://github.com/user-attachments/assets/bead5951-253d-4ac0-975a-97be3ad213c7)
+![image](https://github.com/user-attachments/assets/7556f139-b102-4e3c-90c4-0c8ac677990d)
 
-![image](https://github.com/user-attachments/assets/c52911dc-1c15-491e-b3d9-c84057aec9b9)
+![image](https://github.com/user-attachments/assets/05abe873-d2d7-47e1-a1a1-ecfc197c2934)
 
 - Para abrir la página hacer Ctrl + click en el link de la url local
 
-![image](https://github.com/user-attachments/assets/6dab3e48-2b90-4a53-95bd-59eb4a4f590f)
+![image](https://github.com/user-attachments/assets/ada60d9c-2240-4dc3-96b2-e66d4641c18f)
 
 ![image](https://github.com/user-attachments/assets/12871b34-628b-4f53-bc85-649aea9730ca)
 
