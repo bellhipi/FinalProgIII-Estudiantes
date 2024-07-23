@@ -42,6 +42,7 @@ const Attendance = () => {
     const onClick = async (idalu, ausentes, idcur) => {
         const update = { ausentes: ausentes + 1 }
         const data = { idalu, update }
+        console.log(data)
         await boleService.updateAttendance(data).then((response) => {
         });
         boleService.getFiltrarAusentes(idcur).then((response) => {

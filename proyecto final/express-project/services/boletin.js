@@ -40,15 +40,15 @@ async function getFilterBoletin(req, res) {
 async function getFilterAlumnoAusente(req, res) {
   const arrayAlumnoDB = await Boletin.find({ alumnoid: req.params.id }, { _id: 0, ausentes: 1 }).populate('alumnoid').exec();
   const arrayAusente = []
-    arrayAusente[0] = {
-      _id: arrayAlumnoDB[0].alumnoid._id,
-      nombre: arrayAlumnoDB[0].alumnoid.nombre,
-      dni: arrayAlumnoDB[0].alumnoid.dni,
-      curso: arrayAlumnoDB[0].alumnoid.cursoid,
-      ausentes: arrayAlumnoDB[0].ausentes
-    }
-    res.send(arrayAusente);
+  arrayAusente[0] = {
+    _id: arrayAlumnoDB[0].alumnoid._id,
+    nombre: arrayAlumnoDB[0].alumnoid.nombre,
+    dni: arrayAlumnoDB[0].alumnoid.dni,
+    curso: arrayAlumnoDB[0].alumnoid.cursoid,
+    ausentes: arrayAlumnoDB[0].ausentes
   }
+  res.send(arrayAusente);
+}
 
 
 async function getFilterAusentes(req, res) {
@@ -89,6 +89,31 @@ async function updateAttendance(req, res) {
   res.send(alumnosAusentesDB);
 }
 
+async function updateNotas(req, res) {
+  const arrayNotas = await Boletin.findOne({ alumnoid: req.body.alu }, { _id: 0, notas: 1 })
+
+  const newArrayNotas = []
+  for (var i = 0; i < arrayNotas.notas.length; i++) {
+    if (arrayNotas.notas[i].materiaid == req.body.key) {
+      newArrayNotas[i] = {
+        materiaid: arrayNotas.notas[i].materiaid,
+        nota: req.body.update.numero
+      }
+    }
+    else {
+      newArrayNotas[i] = {
+        materiaid: arrayNotas.notas[i].materiaid,
+        nota: arrayNotas.notas[i].nota
+      }
+    }
+  }
+
+  const update = {notas: newArrayNotas}
+
+  const notasActualizadas = await Boletin.findOneAndUpdate({ alumnoid: req.body.alu }, update);
+  res.send(notasActualizadas);
+}
+
 async function altaBoletin(req, res) {
   const idAlumno = await Alumno.find({ dni: req.body.values.id }, '_id').populate('cursoid').exec();
 
@@ -106,7 +131,7 @@ async function altaBoletin(req, res) {
     notas: arrayNotas,
     alumnoid: idAlumno[0]._id,
   };
-  
+
   await new Boletin(newBole).save();
   res.send(newBole);
 }
@@ -116,5 +141,6 @@ module.exports = {
   getFilterAlumnoAusente: getFilterAlumnoAusente,
   getFilterAusentes: getFilterAusentes,
   updateAttendance: updateAttendance,
+  updateNotas: updateNotas,
   altaBoletin: altaBoletin
 };
