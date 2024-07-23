@@ -22,13 +22,11 @@ Cómo ejecutarlo:
 
 - Abrir dos terminales nuevas, una para ejecutar el back y otra para el front
 
-![image](https://github.com/user-attachments/assets/2f1128c0-c890-4bee-918b-6d4c44541b8a)
+![image](https://github.com/user-attachments/assets/bbf5efb4-bad9-4e83-b6c5-3b099a050ad7)
 
-![image](https://github.com/user-attachments/assets/81e605d0-b877-4a38-acd9-9c10cf3c3776)
+![image](https://github.com/user-attachments/assets/da1518fa-c5f3-43ea-9255-b58a0cf06556)
 
-![image](https://github.com/user-attachments/assets/8d61ad6c-d5be-4f24-8b91-d59e390db3db)
-
-![image](https://github.com/user-attachments/assets/7cd38f2c-6e3e-4115-bfd1-b4116f461585)
+![image](https://github.com/user-attachments/assets/0742ca72-6e29-48ac-9535-abeaef86db6d)
 
 - En una de las terminales posicionarse en la carpeta del back que es express-project con el comando cd
 
