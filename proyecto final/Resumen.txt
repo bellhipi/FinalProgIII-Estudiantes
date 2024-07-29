@@ -1,0 +1,57 @@
+Ideas para agregar:
+Un botón promover para seleccionar alumnos y hacerlos pasar de año.
+Almacenar el tope de ausentes y calcular el porcentaje para saber si el alumno se quedó libre.
+Una forma de recuperar la contraseña ingresando el usuario y el id.
+Una tercera categoría de usuario (el docente directivo y otra para docente con curso y materia asignado).
+Que el boletín solamente aparezca cuando está completo y no muestre las notas con 0 para los alumnos.
+
+--------------------------------------
+
+Ideas en cuanto al código:
+Utilizar bloques try catch en el back y .catch en las promesas.
+Usar querys de mongoose para ordenar y usar las querys findOne.
+En git trabajar todo sobre una rama dev y para cada funcionalidad abrir una rama y cerrarla sobre dev.
+
+--------------------------------------
+
+Conceptos:
+
+- MERN
+
+MongoDB es un sistema de base de datos NoSQL, orientado a documentos y de código abierto.
+En lugar de guardar los datos en tablas, tal y como se hace en las bases de datos relacionales,
+MongoDB guarda estructuras de datos BSON (una especificación similar a JSON) con un esquema dinámico,
+haciendo que la integración de los datos en ciertas aplicaciones sea más fácil y rápida.
+
+Express es el framework web más popular de Node, y es la librería subyacente para un gran número de otros frameworks web de Node populares.
+Proporciona mecanismos para: Escritura de manejadores de peticiones con diferentes verbos HTTP en diferentes caminos URL (rutas).
+
+React es una biblioteca Javascript de código abierto diseñada para crear interfaces de usuario con el objetivo de 
+facilitar el desarrollo de aplicaciones en una sola página. Es mantenido por Facebook y la comunidad de software libre.
+
+Node.js es un entorno en tiempo de ejecución multiplataforma, de código abierto,
+para la capa del servidor basado en el lenguaje de programación JavaScript, asíncrono,
+con E/S de datos en una arquitectura orientada a eventos y basado en el motor V8 de Google. 
+
+- Lenguaje de programación javascript
+	- Promesas: async await .then .catch (asincronismo en lugar de multihilos).
+	
+- React:
+	- Document Object Model o DOM ('Modelo de Objetos del Documento' o 'Modelo en Objetos para la Representación de Documentos') 
+	es esencialmente una interfaz de plataforma, o API de programación para documentos HTML.
+
+	- Componentes (los mas usados fueron los componentes de clase). Tienen propiedades y estados.
+		Se manejan con Hooks:
+		- UseState: para cambiar los estados.
+		- UseEffect: para controlar los efectos por ejemplo llamados a cosas externas. 
+		Las dependencias pueden ser:
+			vacio: corre en cada renderizado
+			[]: corre solamente en el primer renderizado
+			[item1, item2...]: corre en el primer renderizado y cada vez que una dependencia cambie
+		- UseContext: para manejar estados globales.
+
+	- Librerías:
+		- Vite para la creación del proyecto y scaffolding.
+		- react-router-dom para el ruteo de componentes que renderizan con cada url.
+		- Axios: Cliente HTTP basado en promesas para el navegador y node.js.
+		- Ant Desing para la visual.
